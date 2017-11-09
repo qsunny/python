@@ -1,4 +1,4 @@
-#-*- coding: <UTF-8> -*-
+#-*- coding: utf-8 -*-
 
 def sayHello():
     str = "hello world python!!!"
