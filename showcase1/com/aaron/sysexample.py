@@ -34,6 +34,9 @@ def printStaticObjectInfo():
     # exit(2)
     displayhook('a')
 
+def printHello():
+    print("export")
+
 
 if __name__=="__main__" :
     printCommandParam()
