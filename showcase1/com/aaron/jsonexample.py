@@ -4,7 +4,7 @@
 __author__ = 'Aaron.qiu'
 
 import json
-from com.aaron.sysexample import printHello
+from sysexample import printHello
 
 
 if __name__=="__main__" :

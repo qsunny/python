@@ -3,6 +3,7 @@
 __author__="aaron.qiu"
 
 import sys
+import logging
 
 def valueException():
     while True:
@@ -24,6 +25,7 @@ def readFileContent() :
         s = f.readline()
         i = int(s.strip())
     except OSError as err:
+        logging.exception(err)
         print("OS error: {0}".format(err))
     except ValueError:
         print("Could not convert data to an integer.")
