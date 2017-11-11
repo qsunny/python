@@ -3,9 +3,12 @@
 __author__="Aaron.qiu"
 
 class Person(object):
+    birthday = "2017-10-11" # class variable shared by all instances static variable
+
     def __init__(self,name,age):
         """构造函数"""
-        self.__name = name
+        self.__name = name  # instance variable unique to each instance
+
         self.__age = age
 
     def printPersonInfo(self):

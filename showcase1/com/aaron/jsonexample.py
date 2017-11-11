@@ -4,9 +4,9 @@
 __author__ = 'Aaron.qiu'
 
 import json
-#from com.aaron.sysexample import printHello
+from com.aaron.sysexample import printHello
 
 
 if __name__=="__main__" :
-    # printHello()
+    printHello()
     print(json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}]))
