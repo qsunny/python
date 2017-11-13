@@ -40,6 +40,16 @@ class Student(object):
             raise ValueError('score must between 0 ~ 100!')
         self._score = value
 
+class Parent(object):
+    def altered(self):
+        print("PARENT altered()")
+class Child(Parent):
+    def altered(self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child, self).altered()
+        print( "CHILD, AFTER PARENT altered()")
+
+
 if __name__=="__main__":
     person = Person("aaron",25)
     person.__age=23
@@ -62,3 +72,8 @@ if __name__=="__main__":
     student = Student()
     student.set_score(100)
     print(student.get_score())
+
+    dad = Parent()
+    son = Child()
+    dad.altered()
+    son.altered()
