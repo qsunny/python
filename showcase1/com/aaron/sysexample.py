@@ -34,7 +34,7 @@ def printStaticObjectInfo():
     # exit(2)
     displayhook('a')
 
-def printHello():
+def print_hello():
     print("export")
 
 

@@ -55,7 +55,7 @@ def findallShowcase():
     pattern = re.compile(r'\d+')
     print(re.findall(pattern, 'one1two2three3four4'))
 
-def finditerShowcase():
+def finditer_showcase():
     pattern = re.compile(r'\d+')
     for m in re.finditer(pattern, 'one1two2three3four4'):
         print(m.group())
@@ -63,7 +63,7 @@ def finditerShowcase():
 def func(m):
     return m.group(1).title() + ' ' + m.group(2).title()
 
-def subShowcase():
+def sub_showcase():
     pattern = re.compile(r'(\w+) (\w+)')
     s = 'i say, hello world!'
     print(re.sub(pattern, r'\2 \1', s))
@@ -74,6 +74,6 @@ if __name__=="__main__":
     #searchShowcase()
     #splitShowcase()
     #findallShowcase()
-    #finditerShowcase()
-    subShowcase()
+    #finditer_showcase()
+    sub_showcase()
 
