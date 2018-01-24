@@ -3,6 +3,8 @@
 __author__="aaron.qiu"
 
 import re
+import binascii
+import struct
 
 def matchShowcase():
     pattern = re.compile(r'hello',re.I)
@@ -69,6 +71,11 @@ def sub_showcase():
     print(re.sub(pattern, r'\2 \1', s))
     print(re.sub(pattern, func, s))
 
+def example(express, result=None):
+    if result == None:
+        result = eval(express)
+    print(express, ' ==> ', result)
+
 if __name__=="__main__":
     #matchShowcase()
     #searchShowcase()
@@ -76,4 +83,8 @@ if __name__=="__main__":
     #findallShowcase()
     #finditer_showcase()
     sub_showcase()
+
+
+
+
 
