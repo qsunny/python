@@ -31,7 +31,6 @@ class TestDict(unittest.TestCase):
         with self.assertRaises(KeyError):
             value = d['empty']
 
-
     def test_attrerror(self):
         d = Dict()
         with self.assertRaises(AttributeError):
