@@ -4,7 +4,7 @@ __author__="aaron.qiu"
 
 import unittest
 
-from mydict import Dict
+from com.aaron.mydict import Dict
 
 class TestDict(unittest.TestCase):
     def setUp(self):
