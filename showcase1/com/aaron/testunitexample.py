@@ -1,5 +1,5 @@
 # -*- codiing:utf-8 -*-
-"""os example"""
+"""unit test"""
 __author__="aaron.qiu"
 
 import unittest
