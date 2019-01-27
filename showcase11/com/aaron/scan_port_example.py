@@ -6,7 +6,7 @@ pip install port-scanner
 __author__="aaron.qiu"
 
 import os
-import portscanner
+
 
 if __name__=='__main__':
     my_target = portscanner.Target("example.com")
