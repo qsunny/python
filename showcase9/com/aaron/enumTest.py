@@ -1,4 +1,4 @@
-# -*- codiing:utf-8 -*-
+# -*- coding:utf-8 -*-
 """
 seft define override dict
 """
