@@ -8,7 +8,7 @@ from enum import Enum,unique
 
 
 def printEnum(Month):
-    for name,member in  Month.__members__.items():
+    for name,member in Month.__members__.items():
         print(name, '=>', member, ',', member.value)
 
 @unique
