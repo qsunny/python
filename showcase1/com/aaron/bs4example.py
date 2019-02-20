@@ -1,8 +1,10 @@
-# -*- codiing:utf-8 -*-
+# -*- coding:utf-8 -*-
 """regular expressions example"""
 __author__="aaron.qiu"
 
+
 from bs4 import BeautifulSoup
+
 
 def showcase():
     html = """
@@ -33,5 +35,7 @@ def showcase():
     for child in soup.body.children:
         print(child)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     showcase()
+
