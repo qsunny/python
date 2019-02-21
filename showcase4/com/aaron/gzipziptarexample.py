@@ -39,7 +39,8 @@ def gzip_showcase():
     os.remove("file.txt.gz")
     os.remove("file.txt")
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     zlib_showcase()
     gzip_showcase()
 

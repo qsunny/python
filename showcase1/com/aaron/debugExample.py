@@ -10,5 +10,5 @@ def make_brand():
     return "I don't have any time"
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     print(make_brand())
