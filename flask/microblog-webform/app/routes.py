@@ -5,6 +5,7 @@ from app import app
 from config import SECRET_KEY
 
 
+
 '''
 reference doc:
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms
