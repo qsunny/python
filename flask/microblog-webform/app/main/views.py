@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
 
-from flask import render_template
-from app import app
-from config import SECRET_KEY
-
-
+from flask import render_template, session, redirect, url_for, request, make_response, flash
+from . import main
 
 '''
 reference doc:
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms
 https://www.cnblogs.com/jsben/p/4909964.html
+https://github.com/sugarguo/Flask_Blog/blob/master/app/__init__.py
 '''
 
 
-@app.route('/')
-@app.route('/index')
+@main.route('/', methods=['GET'])
 def index():
 
     user = {'username': 'Miguel'}
@@ -30,10 +27,9 @@ def index():
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
 
-@app.route('/config')
-@app.route('/testConfig')
+@main.route('/config', methods=['GET','POST'])
 def testConfig():
-    secret_key = app.config['SECRET_KEY']
-    print(secret_key)
-    return secret_key +"====="+ SECRET_KEY
+    # secret_key = app.config['SECRET_KEY']
+    print("test test")
+    return  "hello test blueprint"
 
