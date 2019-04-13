@@ -5,7 +5,7 @@ Created on 2016年04月15日
 @Description: (描述)
 @author: 'Aaron.Qiu'
 @version V1.0.0
-File front/errors.py
+File main/errors.py
 '''
 
 import os
