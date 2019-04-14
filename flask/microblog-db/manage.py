@@ -8,7 +8,7 @@ Created on 2019-04-13
 '''
 
 import os
-from app import create_app,db
+from app import db,create_app
 from flask_script import Manager, Shell,Server,Command
 from flask_migrate import Migrate, MigrateCommand
 from migrate.versioning import api

@@ -1,6 +1,6 @@
 from flask import Flask
+
 from config import config
-from .main import main as main_blueprint
 from flask_sqlalchemy import SQLAlchemy
 
 # app.config['SECRET_KEY'] = '666666'
@@ -16,7 +16,8 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
-
+    # view导入不能比db的前,会导致db导入错误
+    from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
     # from .admin import admin as admin_blueprint
