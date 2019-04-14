@@ -3,6 +3,8 @@
 from flask import render_template, session, redirect, url_for, request, make_response, flash
 from app.main.forms import LoginForm
 from flask import current_app
+from werkzeug.security import generate_password_hash
+from werkzeug.security import check_password_hash
 
 from config import config
 from . import main
@@ -43,10 +45,11 @@ def login():
         return redirect('/index')
     return render_template('login.html', title='Sign In', form=form)
 
-@main.route('/addUser/<username>/<email>',methods=['GET','POST'])
-def addUser(username,email):
+@main.route('/addUser/<username>/<password>/<email>',methods=['GET','POST'])
+def addUser(username,password,email):
     '''http://127.0.0.1:5000/addUser/hello/hello@example.com '''
     u = User(username=username, email=email)
+    u.set_password(password)
     try:
         db.session.add(u)
         db.session.commit()
