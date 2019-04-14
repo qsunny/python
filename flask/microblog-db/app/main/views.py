@@ -2,7 +2,9 @@
 
 from flask import render_template, session, redirect, url_for, request, make_response, flash
 from . import main
+from config import config
 from app.main.forms import LoginForm
+from flask import current_app
 
 '''
 reference doc:
@@ -41,6 +43,12 @@ def login():
 @main.route('/config', methods=['GET','POST'])
 def testConfig():
     # secret_key = app.config['SECRET_KEY']
+    dict = config.items()
+    print(dict)
+    for k,v in dict:
+        print(k)
+        print(v)
+    repo = current_app.config.get('SQLALCHEMY_MIGRATE_REPO') or "default";
     print("test test")
-    return  "hello test blueprint"
+    return  "hello test blueprint=="+repo
 

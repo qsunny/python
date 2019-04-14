@@ -6,7 +6,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 # SECRET_KEY = 'you-will-never-guess'
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'kjsadf;lksfDsdf211SDF'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'lksfDsdf211SDF'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
     @staticmethod
@@ -15,6 +15,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
+    SQLALCHEMY_MIGRATE_REPO = 'db_repository'
     DEBUG = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
@@ -25,6 +26,7 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
+    SQLALCHEMY_MIGRATE_REPO = 'db_repository'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
                               'sqlite:///' + os.path.join(basedir, 'db_flask_blog_test.sqlite')
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
@@ -32,6 +34,7 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
+    SQLALCHEMY_MIGRATE_REPO = 'db_repository'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
                               'sqlite:///' + os.path.join(basedir, 'db_flask_blog.sqlite')
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
