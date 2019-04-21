@@ -13,6 +13,7 @@ from openpyxl.writer.excel import ExcelWriter
 
 from com.aaron.bean.component_property import ComponentProperty
 from com.aaron.bean.component_prop import ComponentProp
+from com.aaron.dao.component_dao import addComponent
 
 
 def load_excel():
@@ -30,6 +31,8 @@ def load_excel():
                 if cell_value is None:
                     cell_value = '-'
                 print(cell_value,end='\t')
+                if(col_index == 1):
+                    component.categoryTypeNum = str(cell_value)
                 if(col_index == 2):
                     component.category1 = cell_value
                 if (col_index == 3):
@@ -72,6 +75,8 @@ def load_excel():
             for cp in component.getPropList():
                 print(cp)
 
+            # 数据入库
+            addComponent(component)
 
 
             # print(component.getPropDic())

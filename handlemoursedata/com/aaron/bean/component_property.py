@@ -13,6 +13,7 @@ class  ComponentProperty:
     __category2 = ''
     __category3 = ''
     __category4 = ''
+    __categoryTypeNum = ''
     __propList = None
 
     @property
@@ -55,6 +56,14 @@ class  ComponentProperty:
     def category4(self, category4):
         self.__category4 = category4
 
+    @property
+    def categoryTypeNum(self):
+        return self.__categoryTypeNum
+
+    @categoryTypeNum.setter
+    def categoryTypeNum(self, categoryTypeNum):
+        self.__categoryTypeNum = categoryTypeNum
+
     def getPropList(self):
         return self.__propList
 
@@ -63,5 +72,5 @@ class  ComponentProperty:
 
     def __str__(self):
         # print('分类:1' + self.__category1+'--2'+self.__category2+'--3'+self.__category3+'--4'+self.__category4)
-        return '分类1:'+ self.__category1 + '--2:' + self.__category2 + '--3:' + self.__category3 + '--4:' + self.__category4
+        return '分类1:'+ self.__category1 + '--2:' + self.__category2 + '--3:' + self.__category3 + '--4:' + self.__category4 +'--categorytype_num' + self.categoryTypeNum
 

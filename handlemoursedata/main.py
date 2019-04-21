@@ -7,6 +7,9 @@ Created on 2019-04-19
 @version V1.0.0
 '''
 from com.aaron.load_mouse_data import load_excel
+from com.aaron.dao.base_dao import create_db,drop_db
 
 if __name__ == "__main__":
+    # create_db()
+    # drop_db()
     load_excel()
