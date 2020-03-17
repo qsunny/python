@@ -18,7 +18,7 @@ from com.aaron.dao.component_dao import addComponent
 
 def load_excel():
     try:
-        workbook_ = load_workbook(u"D:\用户目录\我的文档\Mouser原始数据-转格式.xlsx")
+        workbook_ = load_workbook("E:\Mouser原始数据.xlsx")
         sheetnames = workbook_.get_sheet_names()  # 获得表单名字
         # print(sheetnames)
         sheet = workbook_.get_sheet_by_name(sheetnames[0])

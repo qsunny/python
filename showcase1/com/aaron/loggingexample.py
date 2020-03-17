@@ -22,5 +22,6 @@ def logging_showcase():
 
     logger.critical('This is critical message')
 
+
 if __name__=="__main__":
     logging_showcase()
