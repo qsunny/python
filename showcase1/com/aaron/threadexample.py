@@ -7,10 +7,11 @@ import threading
 from threading import Timer
 import time
 
-#custom thread
+
 class MyThread(threading.Thread):
-    def __init__(self,x):
-        self.__x = x;
+    """custom thread"""
+    def __init__(self, x):
+        self.__x = x
         threading.Thread.__init__(self)
 
     def run(self):
