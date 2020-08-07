@@ -34,6 +34,26 @@ def query_param():
         query(aa)
 
 
+def query_es_text():
+    # load data
+    file = open(r"C:\\Users\\Administrator\\Desktop\\selection_data_shuffle.txt", mode="r+", encoding="utf-8")
+    lines = file.readlines()
+    rows = len(lines)
+
+    total = 0
+    for line in lines:
+        # line = line.strip().split('\t')
+        line = line.strip()
+        # print(line)
+        result_flag = query(line)
+        if result_flag:
+            total += 1
+
+    print(f"有结果条数:{total}")
+
+
+
+
 def query(line_content):
     if not line_content:
         return
@@ -51,6 +71,7 @@ def query(line_content):
     }
     try:
         r = requests.post(ES_URL, json=json_param, timeout=5)
+        # print(r.text)
         if r.status_code == 200:
             result = json.loads(r.content)
             # pprint(result)
@@ -58,12 +79,15 @@ def query(line_content):
             if result['hits']['total']['value'] > 0:
                 print(f"查询条件:{line_content}")
                 print(result['hits']['hits'])
+                return True
         else:
-            pprint(r.reason)
+            print(f"请求失败原因:{r.reason}")
     except Exception as e:
         pprint(e)
 
+    return False
+
 
 if __name__ == "__main__":
-    query_param()
-
+    # query_param()
+    query_es_text()
