@@ -36,7 +36,7 @@ def query_param():
 
 def query_es_text():
     # load data
-    file = open(r"C:\\Users\\Administrator\\Desktop\\selection_data_shuffle.txt", mode="r+", encoding="utf-8")
+    file = open(r"C:\\Users\\Administrator\\Desktop\\test.txt", mode="r+", encoding="utf-8")
     lines = file.readlines()
     rows = len(lines)
 
@@ -64,7 +64,7 @@ def query(line_content):
       "query": {
         "query_string": {
           "default_field": "partDesc.keyword",
-            "default_operator": "and",
+            "default_operator": "or",
             "query": line_content
         }
       }
