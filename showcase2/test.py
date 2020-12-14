@@ -45,10 +45,10 @@ else:           # This is optional too.
     
 for animal in ["dog", "cat", "mouse"]:
     # You can use {0} to interpolate formatted strings. (See above.)
-    print( "{0} is a mammal".format(animal)    )
+    print("{0} is a mammal".format(animal))
     
 for i in range(4):
-    print( i)    
+    print(i)
     
 for i in range(4, 8):
     print(i)
