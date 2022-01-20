@@ -1,6 +1,6 @@
-pytest==3.0.1
+pytest==6.2.5
 mock==2.0.0
-coverage==4.1
+coverage==6.2
 pytest-cov==2.0
 pytest-randomly==1.0.0
 pytest-mock==1.2
