@@ -15,14 +15,14 @@ db_password = "68"
 # 备份目录
 backup_dir = "/data/backup"
 # backup_prefix和backup_suffix分别为备份文件的前缀和后缀，如test_backup_2019-09-19-11则代表该文件是在2019年9月19日的11点时备份的
-backup_prefix = "livebroadcast_backup"
+backup_prefix = "travel_app_new_backup"
 backup_suffix = "%Y-%m-%d-%H"
 # 备份数据库列表
 backup_databases = [
-    "livebroadcast"
+    "travel_app_new"
 ]
 # 容器名
-container_name = "benyun-db"
+container_name = "tulang-db"
 # 过期小时，定期删除5个小时前的备份文件
 expire_hour = 5
 
