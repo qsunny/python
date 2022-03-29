@@ -14,6 +14,7 @@ db_user = "root"
 db_password = "68"
 # 备份目录
 backup_dir = "/data/backup"
+# tar -zcvf docker-mysql-devops.tar.gz docker-mysql-devops
 # backup_prefix和backup_suffix分别为备份文件的前缀和后缀，如test_backup_2019-09-19-11则代表该文件是在2019年9月19日的11点时备份的
 backup_prefix = "travel_app_new_backup"
 backup_suffix = "%Y-%m-%d-%H"
