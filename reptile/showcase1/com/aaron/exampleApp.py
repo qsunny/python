@@ -45,7 +45,7 @@ def save_image(urls):
 
 
 if __name__ == "__main__":
-    soup = get_html("http://jandan.net/girl/MjAyMjAzMTEtOTk=#comments")
+    soup = get_html("http://jandan.net/zoo")
     urls = get_img_url(soup)
 
     save_image(urls)
