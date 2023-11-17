@@ -1,0 +1,5 @@
+- https://cs50.harvard.edu/ai/2023/
+- https://www.youtube.com/watch?v=5NgNicANyqM
+- [mnist](http://yann.lecun.com/exdb/mnist/)
+- 在线神经网络书籍 [neuralnetworksanddeeplearning](http://neuralnetworksanddeeplearning.com/)
+- [神经网络深度学习示例代码](https://github.com/mnielsen/neural-networks-and-deep-learning.git)

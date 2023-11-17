@@ -18,7 +18,7 @@
 """
 A simple example demonstrating basic Spark SQL features.
 Run with:
-  ./bin/spark-submit examples/src/main/python/sql/basic.py
+  ./bin/spark-submit examples/knowledge/main/python/sql/basic.py
 """
 from __future__ import print_function
 

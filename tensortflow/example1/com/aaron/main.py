@@ -9,7 +9,18 @@ import tensorflow as tf
 """
 文档 https://www.tensorflow.org/tutorials/quickstart/beginner?hl=zh-cn
 
+conda create --name tensortflow python=3.9 -y
 pip install tensorflow-cpu
+pip install --upgrade tensorflow
+python -m pip show scikit-learn
+python -c "import sklearn; sklearn.show_versions()"
+pip install pomegranate
+
+pip install -U scikit-learn
+In order to check your installation you can use
+python -m pip show scikit-learn  # to see which version and where scikit-learn is installed
+python -m pip freeze  # to see all packages installed in the active virtualenv
+python -c "import sklearn; sklearn.show_versions()"
 
 """
 

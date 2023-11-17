@@ -18,7 +18,7 @@
 """
 A simple example demonstrating Spark SQL Hive integration.
 Run with:
-  ./bin/spark-submit examples/src/main/python/sql/hive.py
+  ./bin/spark-submit examples/knowledge/main/python/sql/hive.py
 """
 from __future__ import print_function
 
@@ -43,11 +43,11 @@ if __name__ == "__main__":
         .getOrCreate()
 
     # spark is an existing SparkSession
-    spark.sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING) USING hive")
-    spark.sql("LOAD DATA LOCAL INPATH 'kv1.txt' INTO TABLE src")
+    spark.sql("CREATE TABLE IF NOT EXISTS knowledge (key INT, value STRING) USING hive")
+    spark.sql("LOAD DATA LOCAL INPATH 'kv1.txt' INTO TABLE knowledge")
 
     # Queries are expressed in HiveQL
-    spark.sql("SELECT * FROM src").show()
+    spark.sql("SELECT * FROM knowledge").show()
     # +---+-------+
     # |key|  value|
     # +---+-------+
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     # ...
 
     # Aggregation queries are also supported.
-    spark.sql("SELECT COUNT(*) FROM src").show()
+    spark.sql("SELECT COUNT(*) FROM knowledge").show()
     # +--------+
     # |count(1)|
     # +--------+
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # +--------+
 
     # The results of SQL queries are themselves DataFrames and support all normal functions.
-    sqlDF = spark.sql("SELECT key, value FROM src WHERE key < 10 ORDER BY key")
+    sqlDF = spark.sql("SELECT key, value FROM knowledge WHERE key < 10 ORDER BY key")
 
     # The items in DataFrames are of type Row, which allows you to access each column by ordinal.
     stringsDS = sqlDF.rdd.map(lambda row: "Key: %d, Value: %s" % (row.key, row.value))
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     recordsDF.createOrReplaceTempView("records")
 
     # Queries can then join DataFrame data with data stored in Hive.
-    spark.sql("SELECT * FROM records r JOIN src s ON r.key = s.key").show()
+    spark.sql("SELECT * FROM records r JOIN knowledge s ON r.key = s.key").show()
     # +---+------+---+------+
     # |key| value|key| value|
     # +---+------+---+------+

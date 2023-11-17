@@ -121,15 +121,15 @@ def ppt2pdf(ppt_path='ppt_path', ppt_pdf_path='ppt_to_pdf'):
 
 
 if __name__ == "__main__":
-    # word_path = "D:\\temp\\word"
-    # word_to_pdf = "D:\\temp\\pdf"
-    # word2pdf(word_path, word_to_pdf)
+    word_path = "D:\\temp\\word"
+    word_to_pdf = "D:\\temp\\pdf"
+    word2pdf(word_path, word_to_pdf)
 
-    excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
-    execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
+    # excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
+    # execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
     # excel2pdf(excel_path, execl_pdf_path)
     # excel2pdf_v2(excel_path, execl_pdf_path)
-    excel2pdf_v3(excel_path, execl_pdf_path)
+    # excel2pdf_v3(excel_path, execl_pdf_path)
 
     # ppt_path = "D:\\temp\\ppt\\默予科技_20220702.pptx"
     # ppt_pdf_path = "D:\\temp\\pdf\\默予科技_20220702.pdf"

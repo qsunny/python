@@ -15,8 +15,8 @@ def shutil_showcase():
 
 def shutil_copy_showcase():
     """
-    shutil.copy(src, dst) 将源文件复制到目标地址
-    shutil.copyfile(src, dst) 与 shutil.copy 使用方法一致，
+    shutil.copy(knowledge, dst) 将源文件复制到目标地址
+    shutil.copyfile(knowledge, dst) 与 shutil.copy 使用方法一致，
     不过只是简单复制文件的内容，并不会复制文件本身的读写可执行权限，而 shutil.copy 则是完全复制。
     """
     shutil.copy("test.file", "test.copy.file")

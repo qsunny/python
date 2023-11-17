@@ -18,7 +18,7 @@
 """
 A simple example demonstrating Arrow in Spark.
 Run with:
-  ./bin/spark-submit examples/src/main/python/sql/arrow.py
+  ./bin/spark-submit examples/knowledge/main/python/sql/arrow.py
 """
 
 from __future__ import print_function

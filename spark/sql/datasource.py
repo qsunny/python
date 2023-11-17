@@ -18,7 +18,7 @@
 """
 A simple example demonstrating Spark SQL data sources.
 Run with:
-  ./bin/spark-submit examples/src/main/python/sql/datasource.py
+  ./bin/spark-submit examples/knowledge/main/python/sql/datasource.py
 """
 from __future__ import print_function
 
@@ -33,8 +33,8 @@ def generic_file_source_options_example(spark):
     # enable ignore corrupt files
     spark.sql("set spark.sql.files.ignoreCorruptFiles=true")
     # dir1/file3.json is corrupt from parquet's view
-    test_corrupt_df = spark.read.parquet("examples/src/main/resources/dir1/",
-                                         "examples/src/main/resources/dir1/dir2/")
+    test_corrupt_df = spark.read.parquet("examples/knowledge/main/resources/dir1/",
+                                         "examples/knowledge/main/resources/dir1/dir2/")
     test_corrupt_df.show()
     # +-------------+
     # |         file|
@@ -47,7 +47,7 @@ def generic_file_source_options_example(spark):
     # $example on:recursive_file_lookup$
     recursive_loaded_df = spark.read.format("parquet")\
         .option("recursiveFileLookup", "true")\
-        .load("examples/src/main/resources/dir1")
+        .load("examples/knowledge/main/resources/dir1")
     recursive_loaded_df.show()
     # +-------------+
     # |         file|
@@ -59,7 +59,7 @@ def generic_file_source_options_example(spark):
     spark.sql("set spark.sql.files.ignoreCorruptFiles=false")
 
     # $example on:load_with_path_glob_filter$
-    df = spark.read.load("examples/src/main/resources/dir1",
+    df = spark.read.load("examples/knowledge/main/resources/dir1",
                          format="parquet", pathGlobFilter="*.parquet")
     df.show()
     # +-------------+
@@ -72,7 +72,7 @@ def generic_file_source_options_example(spark):
 
 def basic_datasource_example(spark):
     # $example on:generic_load_save_functions$
-    df = spark.read.load("examples/src/main/resources/users.parquet")
+    df = spark.read.load("examples/knowledge/main/resources/users.parquet")
     df.select("name", "favorite_color").write.save("namesAndFavColors.parquet")
     # $example off:generic_load_save_functions$
 
@@ -81,7 +81,7 @@ def basic_datasource_example(spark):
     # $example off:write_partitioning$
 
     # $example on:write_partition_and_bucket$
-    df = spark.read.parquet("examples/src/main/resources/users.parquet")
+    df = spark.read.parquet("examples/knowledge/main/resources/users.parquet")
     (df
         .write
         .partitionBy("favorite_color")
@@ -90,17 +90,17 @@ def basic_datasource_example(spark):
     # $example off:write_partition_and_bucket$
 
     # $example on:manual_load_options$
-    df = spark.read.load("examples/src/main/resources/people.json", format="json")
+    df = spark.read.load("examples/knowledge/main/resources/people.json", format="json")
     df.select("name", "age").write.save("namesAndAges.parquet", format="parquet")
     # $example off:manual_load_options$
 
     # $example on:manual_load_options_csv$
-    df = spark.read.load("examples/src/main/resources/people.csv",
+    df = spark.read.load("examples/knowledge/main/resources/people.csv",
                          format="csv", sep=":", inferSchema="true", header="true")
     # $example off:manual_load_options_csv$
 
     # $example on:manual_save_options_orc$
-    df = spark.read.orc("examples/src/main/resources/users.orc")
+    df = spark.read.orc("examples/knowledge/main/resources/users.orc")
     (df.write.format("orc")
         .option("orc.bloom.filter.columns", "favorite_color")
         .option("orc.dictionary.key.threshold", "1.0")
@@ -113,7 +113,7 @@ def basic_datasource_example(spark):
     # $example off:write_sorting_and_bucketing$
 
     # $example on:direct_sql$
-    df = spark.sql("SELECT * FROM parquet.`examples/src/main/resources/users.parquet`")
+    df = spark.sql("SELECT * FROM parquet.`examples/knowledge/main/resources/users.parquet`")
     # $example off:direct_sql$
 
     spark.sql("DROP TABLE IF EXISTS people_bucketed")
@@ -122,7 +122,7 @@ def basic_datasource_example(spark):
 
 def parquet_example(spark):
     # $example on:basic_parquet_example$
-    peopleDF = spark.read.json("examples/src/main/resources/people.json")
+    peopleDF = spark.read.json("examples/knowledge/main/resources/people.json")
 
     # DataFrames can be saved as Parquet files, maintaining the schema information.
     peopleDF.write.parquet("people.parquet")
@@ -181,7 +181,7 @@ def json_dataset_example(spark):
 
     # A JSON dataset is pointed to by path.
     # The path can be either a single text file or a directory storing text files
-    path = "examples/src/main/resources/people.json"
+    path = "examples/knowledge/main/resources/people.json"
     peopleDF = spark.read.json(path)
 
     # The inferred schema can be visualized using the printSchema() method
