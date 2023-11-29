@@ -11,6 +11,7 @@ from win32com import client
 import pandas as pd
 import pandas as pd
 import pdfkit
+from pdf2docx import parse
 
 """word、excel 转换 PDF"""
 __author__ = "aaron.qiu"
@@ -25,6 +26,8 @@ pip install plum-dispatch==1.7.4
 
 pip install pandas
 pip install pdfkit openpyxl
+
+pip install pdf2docx
 
 """
 
@@ -105,6 +108,17 @@ def excel2pdf_v3(excel_path='excel_path', execl_pdf_path='excel_to_pdf'):
     pdfkit.from_file("file.html", execl_pdf_path, configuration=config)  # to pdf
 
 
+def pdf2docx(pdf_path='pdf_path', docx_path='pdf_to_docx'):
+    """ pdf 转 word
+    pdf_path = "D:/公众号/0626/Python研究者.pdf"
+    docx_path = "D:/公众号/0626/Python研究者.xls"
+    - 目前暂不支持扫描PDF文字识别
+    - 仅支持从左向右书写的语言（因此不支持阿拉伯语）
+    - 不支持旋转的文字
+    - 基于规则的解析无法保证100%还原PDF样式
+    """
+    # convert pdf to docx
+    parse(pdf_path, docx_path)
 
 def ppt2pdf(ppt_path='ppt_path', ppt_pdf_path='ppt_to_pdf'):
     """ excel 转 pdf """
@@ -121,9 +135,13 @@ def ppt2pdf(ppt_path='ppt_path', ppt_pdf_path='ppt_to_pdf'):
 
 
 if __name__ == "__main__":
-    word_path = "D:\\temp\\word"
-    word_to_pdf = "D:\\temp\\pdf"
-    word2pdf(word_path, word_to_pdf)
+    # word_path = "D:\\temp\\word"
+    # word_to_pdf = "D:\\temp\\pdf"
+    # word2pdf(word_path, word_to_pdf)
+
+    pdf_path = "D:\\temp\\pdf\\天津港生产作业项目需求变更开发服务合同_V3(1).pdf"
+    docx_path = "D:\\temp\\word\\天津港生产作业项目需求变更开发服务合同_V4.docx"
+    pdf2docx(pdf_path, docx_path)
 
     # excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
     # execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
