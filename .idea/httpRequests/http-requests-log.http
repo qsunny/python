@@ -1,0 +1,560 @@
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "mytable",
+  "query": {
+    "match":{"intro": "@intro 0402 X7R 100nf ±10% 16V"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-23T215852.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "mytable",
+  "query": {
+    "match":{"intro": "@intro X7R 0402 22nf 25V"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-23T215750.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "mytable",
+  "query": {
+    "match":{"intro": "@intro X7R 0402 22nf"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-23T215632.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "mytable",
+  "query": {
+    "match":{"intro": "@intro X7R 0402 22nf"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-23T215240.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_product",
+  "query": {
+    "match":{"intro": "@intro X7R 0402 22nf"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-23T215218.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_product",
+  "query": {
+    "match":{"intro": "X7R 0402 22nf"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-23T215155.200.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+<> 2023-12-22T230909.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+<> 2023-12-22T230906.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T230901.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T230859.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T230858.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+<> 2023-12-22T230842.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+<> 2023-12-22T230839.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+<> 2023-12-22T230838.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+<> 2023-12-22T230835.400.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T230530.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T230526.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "forum",
+  "query":
+  {
+    "match_all": {},
+    "bool":
+    {
+      "must":
+      [
+        { "equals": { "author_id": 123 } },
+        { "in": { "forum_id": [1,3,7] } }
+      ]
+    }
+  },
+  "sort": [ { "post_date": "desc" } ]
+}
+
+<> 2023-12-22T230501.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "forum",
+  "query":
+  {
+    "match_all": {},
+    "bool":
+    {
+      "must":
+      [
+        { "equals": { "author_id": 123 } },
+        { "in": { "forum_id": [1,3,7] } }
+      ]
+    }
+  },
+  "sort": [ { "post_date": "desc" } ]
+}
+
+<> 2023-12-22T230458.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_product",
+  "query": {
+    "match":{"intro": "X7R 0402 22nf"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-22T230448.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "forum",
+  "query":
+  {
+    "match_all": {},
+    "bool":
+    {
+      "must":
+      [
+        { "equals": { "author_id": 123 } },
+        { "in": { "forum_id": [1,3,7] } }
+      ]
+    }
+  },
+  "sort": [ { "post_date": "desc" } ]
+}'
+
+<> 2023-12-22T230444.200.json
+
+###
+
+POST http://192.168.2.8:9308/search
+Content-Type: application/json
+
+{
+  "index": "forum",
+  "query":
+  {
+    "match_all": {},
+    "bool":
+    {
+      "must":
+      [
+        { "equals": { "author_id": 123 } },
+        { "in": { "forum_id": [1,3,7] } }
+      ]
+    }
+  },
+  "sort": [ { "post_date": "desc" } ]
+}'
+
+<> 2023-12-22T230429.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_product",
+  "query": {
+    "match":{"intro": "X7R 0402 22nf"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+<> 2023-12-22T215737.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_product",
+  "query": {
+    "match":{"intro": "X7R 0402 22nf"}
+  }
+
+}
+
+<> 2023-12-22T215535.200.json
+
+###
+
+POST http://192.168.2.8:9308/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_product",
+  "query": {
+    "match":{"intro": "X7R 0402 22nf"}
+  }
+
+}
+
+<> 2023-12-22T215533.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T215216.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T215213.200.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
+Content-Type: application/x-www-form-urlencoded
+
+<> 2023-12-22T214823.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
+Content-Type: application/x-www-form-urlencoded
+
+<> 2023-12-22T214822.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
+Content-Type: application/x-www-form-urlencoded
+
+<> 2023-12-22T214820.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
+Content-Type: application/x-www-form-urlencoded
+
+<> 2023-12-22T214818.400.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T214733.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: text/plain
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T210422.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: text/plain
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T205903.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: text/plain
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T205017.200.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
+Content-Type: text/plain
+
+<> 2023-12-22T205008.400.json
+
+###
+
+POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
+
+<> 2023-12-22T204944.400.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/sql
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T204140.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/sql
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T204132.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: text/plain
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T204109.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: text/plain
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T203042.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/text
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T202635.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+<> 2023-12-22T202126.200.json
+
+###
+
+POST http://192.168.2.8:9308/cli
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+<> 2023-12-22T202057.200.json
+
+###
+
+GET http://192.168.2.8:9308/search
+
+<> 2023-12-22T201714.400.json
+
+###
+
+GET http://192.168.2.8:9308/search
+
+<> 2023-12-22T201709.400.json
+
+###
+
+GET http://192.168.2.8:9308/search
+Content-Type: a
+
+<> 2023-12-22T201704.400.json
+
+###
+
+GET http://192.168.2.8:9308/search
+Content-Type: application/json
+
+<> 2023-12-22T201629.400.json
+
+###
+
+POST http://192.168.2.8:9308/search
+Content-Type: application/json
+
+<> 2023-12-22T201555.400.json
+
+###
+

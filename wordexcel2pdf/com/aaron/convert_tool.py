@@ -139,14 +139,14 @@ if __name__ == "__main__":
     # word_to_pdf = "D:\\temp\\pdf"
     # word2pdf(word_path, word_to_pdf)
 
-    pdf_path = "D:\\temp\\pdf\\天津港生产作业项目需求变更开发服务合同_V3(1).pdf"
-    docx_path = "D:\\temp\\word\\天津港生产作业项目需求变更开发服务合同_V4.docx"
-    pdf2docx(pdf_path, docx_path)
+    # pdf_path = "D:\\temp\\pdf\\天津港生产作业项目需求变更开发服务合同_V3(1).pdf"
+    # docx_path = "D:\\temp\\word\\天津港生产作业项目需求变更开发服务合同_V4.docx"
+    # pdf2docx(pdf_path, docx_path)
 
-    # excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
-    # execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
+    excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
+    execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
     # excel2pdf(excel_path, execl_pdf_path)
-    # excel2pdf_v2(excel_path, execl_pdf_path)
+    excel2pdf_v2(excel_path, execl_pdf_path)
     # excel2pdf_v3(excel_path, execl_pdf_path)
 
     # ppt_path = "D:\\temp\\ppt\\默予科技_20220702.pptx"

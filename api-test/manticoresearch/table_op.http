@@ -1,0 +1,47 @@
+POST http://{{base-url}}/cli
+Content-Type: application/x-www-form-urlencoded
+
+"create table products(title text, price float) morphology='stem_en'"
+
+
+###
+POST http://{{base-url}}/sql?mode=raw
+Content-Type: application/x-www-form-urlencoded
+
+"desc chips_product"
+
+###
+POST http://{{base-url}}/json/search
+Content-Type: application/json
+
+{
+  "index": "mytable",
+  "query": {
+    "match":{"intro": "@intro 0402 X7R 100nf ±10% 16V"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+###
+POST http://{{base-url}}/json/search
+Content-Type: application/json
+
+{
+  "index": "forum",
+  "query":
+  {
+    "match_all": {},
+    "bool":
+    {
+      "must":
+      [
+        { "equals": { "author_id": 123 } },
+        { "in": { "forum_id": [1,3,7] } }
+      ]
+    }
+  },
+  "sort": [ { "post_date": "desc" } ]
+}
