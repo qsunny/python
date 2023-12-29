@@ -1,3 +1,10 @@
+# -*- coding:utf-8 -*-
+"""
+
+pip install -U request
+"""
+__author__ = "aaron.qiu"
+
 import base64
 import hmac
 import hashlib 

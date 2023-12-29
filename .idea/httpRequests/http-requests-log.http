@@ -1,10 +1,833 @@
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "mytable",
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "0603 X5R 1uf ±10% 50V",
+				"operator": "or"
+			}
+		}
+	}
+}
+
+<> 2023-12-29T174352.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 403
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "0603 X5R 1uf ±10% 50V",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": ""
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": ""
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T174332.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 253
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "0603 X5R 1uf ±10% 50V",
+				"operator": "or"
+			}
+		}
+	}
+}
+
+<> 2023-12-29T174302.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 447
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "0603 X5R 1uf ±10% 50V",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "0603 X5R 1uf ±10% 50V"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "0603 X5R 1uf ±10% 50V"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T174136.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 486
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "0603 X5R 1uf ±10% 50V 贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "0603 X5R 1uf ±10% 50V 贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "0603 X5R 1uf ±10% 50V 贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T174040.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 417
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T174009.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 412
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T172313.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 412
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T171743.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 407
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": [""],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T171736.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 406
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": [],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T171726.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 434
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "profile": true,
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T171710.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T171651.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T170427.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T170413.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T170146.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T164238.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T164237.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T164235.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T164230.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T164210.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电阻",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电阻"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电阻"
+				}
+			}]
+		}
+	}
+}
+
+<> 2023-12-29T164016.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "@intro 0402 X7R 100nf ±10% 16V"}
+    "match":{"brand": "@风华"}
   },
   "highlight": {
     "fields": ["name"]
@@ -12,254 +835,719 @@ Content-Type: application/json
 
 }
 
-<> 2023-12-23T215852.200.json
+<> 2023-12-29T163956.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 413
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "mytable",
-  "query": {
-    "match":{"intro": "@intro X7R 0402 22nf 25V"}
-  },
-  "highlight": {
-    "fields": ["name"]
-  }
-
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 30,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand": {
+				"query": "贴片电容",
+				"operator": "or"
+			}
+		},
+		"bool": {
+			"should": [{
+				"equals": {
+					"category_name": "贴片电容"
+				}
+			}, {
+				"equals": {
+					"last_two_category_name": "贴片电容"
+				}
+			}]
+		}
+	}
 }
 
-<> 2023-12-23T215750.200.json
+<> 2023-12-29T163920.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 301
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"index":"chips_all_product","limit":30,"offset":30,"sort":["stock"],"aggs":{},"expressions":{},"options":{},"query":{"match":{"intro,brand":{"query":"贴片电容","operator":"or"}},"bool":{"should":[{"equals":{"category_name":"贴片电容"}},{"equals":{"last_two_category_name":"贴片电容"}}]}}}
+
+<> 2023-12-29T163806.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 658
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "mytable",
+  "profile": true,
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "@intro X7R 0402 22nf"}
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电阻"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电阻"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电阻"
+                }
+              },
+              {
+                "match": {
+                  "brand": "11"
+                }
+              }
+            ]
+    }
   },
   "highlight": {
-    "fields": ["name"]
+    "fields": [
+      "name"
+    ]
   }
-
 }
 
-<> 2023-12-23T215632.200.json
+<> 2023-12-29T160449.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 656
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "mytable",
+  "profile": true,
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "@intro X7R 0402 22nf"}
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电阻"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电阻"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电阻"
+                }
+              },
+              {
+                "match": {
+                  "brand": ""
+                }
+              }
+            ]
+    }
   },
   "highlight": {
-    "fields": ["name"]
+    "fields": [
+      "name"
+    ]
   }
-
 }
 
-<> 2023-12-23T215240.200.json
+<> 2023-12-29T160436.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 659
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "chips_product",
+  "profile": true,
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "@intro X7R 0402 22nf"}
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电阻"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电阻"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电阻"
+                }
+              },
+              {
+                "match": {
+                  "brand": "til"
+                }
+              }
+            ]
+    }
   },
   "highlight": {
-    "fields": ["name"]
+    "fields": [
+      "name"
+    ]
   }
-
 }
 
-<> 2023-12-23T215218.200.json
+<> 2023-12-29T160405.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 662
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "chips_product",
+  "profile": true,
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "X7R 0402 22nf"}
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电阻"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电阻"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电阻"
+                }
+              },
+              {
+                "match": {
+                  "brand": "风华"
+                }
+              }
+            ]
+    }
   },
   "highlight": {
-    "fields": ["name"]
+    "fields": [
+      "name"
+    ]
   }
-
 }
 
-<> 2023-12-23T215155.200.json
+<> 2023-12-29T160341.200.json
 
 ###
 
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"desc chips_product"
-
-<> 2023-12-22T230909.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"desc chips_product"
-
-<> 2023-12-22T230906.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T230901.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T230859.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T230858.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"desc chips_product"
-
-<> 2023-12-22T230842.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"desc chips_product"
-
-<> 2023-12-22T230839.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"desc chips_product"
-
-<> 2023-12-22T230838.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw
-Content-Type: application/x-www-form-urlencoded
-
-"desc chips_product"
-
-<> 2023-12-22T230835.400.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T230530.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T230526.200.json
-
-###
-
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 662
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "forum",
-  "query":
-  {
-    "match_all": {},
-    "bool":
-    {
-      "must":
-      [
-        { "equals": { "author_id": 123 } },
-        { "in": { "forum_id": [1,3,7] } }
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电容"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              },
+              {
+                "match": {
+                  "brand": "风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160255.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 661
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电容"
+          }
+        }
+      ],
+            "should": [
+              {
+                "match": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "match": {
+                  "last_two_category_name": "电容"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160223.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 663
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "电容"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160158.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 663
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "风华"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160151.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 663
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "风华"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160138.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 664
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "@风华"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160131.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 663
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "风华"
+          }
+        }
+      ],
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T160110.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 715
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+          }
+        }
       ]
     }
   },
-  "sort": [ { "post_date": "desc" } ]
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
 }
 
-<> 2023-12-22T230501.200.json
+<> 2023-12-29T155927.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 697
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "forum",
-  "query":
-  {
-    "match_all": {},
-    "bool":
-    {
-      "must":
-      [
-        { "equals": { "author_id": 123 } },
-        { "in": { "forum_id": [1,3,7] } }
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": ""
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": ""
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": ""
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+          }
+        }
       ]
     }
   },
-  "sort": [ { "post_date": "desc" } ]
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
 }
 
-<> 2023-12-22T230458.200.json
+<> 2023-12-29T155910.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "chips_product",
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "X7R 0402 22nf"}
+    "match":{"brand": "@风华"}
   },
   "highlight": {
     "fields": ["name"]
@@ -267,65 +1555,276 @@ Content-Type: application/json
 
 }
 
-<> 2023-12-22T230448.200.json
+<> 2023-12-29T155858.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 709
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "forum",
-  "query":
-  {
-    "match_all": {},
-    "bool":
-    {
-      "must":
-      [
-        { "equals": { "author_id": 123 } },
-        { "in": { "forum_id": [1,3,7] } }
-      ]
-    }
-  },
-  "sort": [ { "post_date": "desc" } ]
-}'
-
-<> 2023-12-22T230444.200.json
-
-###
-
-POST http://192.168.2.8:9308/search
-Content-Type: application/json
-
-{
-  "index": "forum",
-  "query":
-  {
-    "match_all": {},
-    "bool":
-    {
-      "must":
-      [
-        { "equals": { "author_id": 123 } },
-        { "in": { "forum_id": [1,3,7] } }
-      ]
-    }
-  },
-  "sort": [ { "post_date": "desc" } ]
-}'
-
-<> 2023-12-22T230429.200.json
-
-###
-
-POST http://192.168.2.8:9308/json/search
-Content-Type: application/json
-
-{
-  "index": "chips_product",
+  "profile": true,
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "X7R 0402 22nf"}
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": ""
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "@风华"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155852.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 708
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": ""
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "风华"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155840.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 715
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "@风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              },
+              {
+                "match": {
+                  "brand": "风华"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155833.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 600
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "brand": "风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "风华"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "风华"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155715.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 600
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "brand": "风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155656.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "index": "chips_all_product",
+  "query": {
+    "match":{"brand": "@风华"}
   },
   "highlight": {
     "fields": ["name"]
@@ -333,228 +1832,253 @@ Content-Type: application/json
 
 }
 
-<> 2023-12-22T215737.200.json
+<> 2023-12-29T155644.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "chips_product",
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "X7R 0402 22nf"}
+    "match":{"brand|intro": "@风华"}
+  },
+  "highlight": {
+    "fields": ["name"]
   }
 
 }
 
-<> 2023-12-22T215535.200.json
+<> 2023-12-29T155637.200.json
 
 ###
 
-POST http://192.168.2.8:9308/json/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 600
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "index": "chips_product",
+  "profile": true,
+  "index": "chips_all_product",
   "query": {
-    "match":{"intro": "X7R 0402 22nf"}
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "brand": "风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155617.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 606
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro|brand": "风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155604.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 686
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "风华"
+          }
+        },
+        {
+          "equals": {
+            "brand": "@风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
+
+<> 2023-12-29T155545.200.json
+
+###
+
+POST http://121.37.245.82:9308/json/search
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "index": "chips_all_product",
+  "query": {
+    "match":{"brand": "@风华"}
+  },
+  "highlight": {
+    "fields": ["name"]
   }
 
 }
 
-<> 2023-12-22T215533.200.json
+<> 2023-12-29T155515.200.json
 
 ###
 
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T215216.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T215213.200.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
-Content-Type: application/x-www-form-urlencoded
-
-<> 2023-12-22T214823.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
-Content-Type: application/x-www-form-urlencoded
-
-<> 2023-12-22T214822.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
-Content-Type: application/x-www-form-urlencoded
-
-<> 2023-12-22T214820.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
-Content-Type: application/x-www-form-urlencoded
-
-<> 2023-12-22T214818.400.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T214733.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: text/plain
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T210422.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: text/plain
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T205903.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: text/plain
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T205017.200.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
-Content-Type: text/plain
-
-<> 2023-12-22T205008.400.json
-
-###
-
-POST http://192.168.2.8:9308/sql?mode=raw -d "query=desc chips_product"
-
-<> 2023-12-22T204944.400.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/sql
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T204140.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/sql
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T204132.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: text/plain
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T204109.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: text/plain
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T203042.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/text
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T202635.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-"create table products(title text, price float) morphology='stem_en'"
-
-<> 2023-12-22T202126.200.json
-
-###
-
-POST http://192.168.2.8:9308/cli
-Content-Type: application/x-www-form-urlencoded
-
-id=99&content=new-element
-
-<> 2023-12-22T202057.200.json
-
-###
-
-GET http://192.168.2.8:9308/search
-
-<> 2023-12-22T201714.400.json
-
-###
-
-GET http://192.168.2.8:9308/search
-
-<> 2023-12-22T201709.400.json
-
-###
-
-GET http://192.168.2.8:9308/search
-Content-Type: a
-
-<> 2023-12-22T201704.400.json
-
-###
-
-GET http://192.168.2.8:9308/search
+POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
+Content-Length: 690
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-12-22T201629.400.json
+{
+  "profile": true,
+  "index": "chips_all_product",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "intro": "风华"
+          }
+        },
+        {
+          "equals": {
+            "any(brand)": "风华"
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "equals": {
+                  "category_name": "电容"
+                }
+              },
+              {
+                "equals": {
+                  "last_two_category_name": "电容"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlight": {
+    "fields": [
+      "name"
+    ]
+  }
+}
 
-###
-
-POST http://192.168.2.8:9308/search
-Content-Type: application/json
-
-<> 2023-12-22T201555.400.json
+<> 2023-12-29T154355.200.json
 
 ###
 

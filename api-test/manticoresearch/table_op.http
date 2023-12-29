@@ -15,7 +15,7 @@ POST http://{{base-url}}/json/search
 Content-Type: application/json
 
 {
-  "index": "mytable",
+  "index": "chips_all_product",
   "query": {
     "match":{"intro": "@intro 0402 X7R 100nf ±10% 16V"}
   },
@@ -25,6 +25,42 @@ Content-Type: application/json
 
 }
 
+###
+POST http://{{base-url}}/json/search
+Content-Type: application/json
+
+{
+  "index": "chips_all_product",
+  "query": {
+    "match":{"brand": "@风华"}
+  },
+  "highlight": {
+    "fields": ["name"]
+  }
+
+}
+
+### bool查询
+POST http://{{base-url}}/json/search
+Content-Type: application/json
+
+{
+	"index": "chips_all_product",
+	"limit": 30,
+	"offset": 0,
+	"sort": ["stock"],
+	"aggs": {},
+	"expressions": {},
+	"options": {},
+	"query": {
+		"match": {
+			"intro,brand,name": {
+				"query": "0603 X5R 1uf ±10% 50V",
+				"operator": "or"
+			}
+		}
+	}
+}
 ###
 POST http://{{base-url}}/json/search
 Content-Type: application/json
