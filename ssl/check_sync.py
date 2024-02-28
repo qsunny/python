@@ -8,7 +8,7 @@ port = "443"
 
 # 获取证书信息
 # cert_info = subprocess.check_output(["openssl", "s_client", "-connect", f"{domain}:{port}"], stderr=subprocess.DEVNULL)
-cert_path = "/data/workspace-py/out/*.yunlang.net.cn/\'*.yunlang.net.cn.cer\'"
+cert_path = "/data/workspace-py/out/*.yunlang.net.cn/fullchain.cer"
 cert_dates = subprocess.check_output(["openssl", "x509", "-in", cert_path, "-noout", "-dates"])
 
 # 解析证书有效期
