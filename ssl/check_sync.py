@@ -18,6 +18,7 @@ end_date = datetime.datetime.strptime(cert_dates[1].split("=")[1], '%b %d %H:%M:
 
 # 检查证书是否过期
 days_until_expiry = (end_date - datetime.datetime.now()).days
+pprint(format("失效天数%d" , days_until_expiry))
 if days_until_expiry < 30:  # 如果剩余天数少于30天，则更新证书
     pprint("小于30天")
     # subprocess.run(["certbot", "renew"])
