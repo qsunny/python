@@ -139,8 +139,8 @@ if __name__ == "__main__":
     # word_to_pdf = "D:\\temp\\pdf"
     # word2pdf(word_path, word_to_pdf)
 
-    pdf_path = "D:\\temp\\pdf\\STUCSO231000012CS-许梦香薰精油.pdf"
-    docx_path = "D:\\temp\\word\\STUCSO231000012CS-许梦香薰精油.docx"
+    pdf_path = "D:\\temp\\pdf\\特威森-香薰精油 MSDS-2023.pdf"
+    docx_path = "D:\\temp\\word\\特威森-香薰精油 MSDS-2023.docx"
     pdf2docx(pdf_path, docx_path)
 
     # excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
