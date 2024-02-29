@@ -43,13 +43,13 @@ def get_file_time(filename):
     return update_time_str
 
 
-def renew_cert(ali_key="", ali_secret=""):
+def renew_cert(ali_key=None, ali_secret=None, acme_home=None):
     env_dic = {"Ali_Key": ali_key, "Ali_Secret": ali_secret}
     try:
-        renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force",
-                                                "--home", "/home/aaron/.acme.sh", "--config-home", "/home/aaron/.acme.sh",
-                                                "--log", "/home/aaron/.acme.sh/acme.sh.log", "--accountconf", "/home/aaron/.acme.sh/account.conf"],
-                                               env=env_dic, stderr=STDOUT, cwd="/home/aaron/.acme.sh", universal_newlines=True)
+        renew_result = subprocess.check_output([acme_home+"/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force",
+                                                "--home", acme_home, "--config-home", acme_home,
+                                                "--log", acme_home+"/acme.sh.log", "--accountconf", acme_home+"/account.conf"],
+                                               env=env_dic, stderr=STDOUT, cwd=acme_home, universal_newlines=True)
 
         # renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--version"],
         #                                        env={"Ali_Key": ali_key, "Ali_Secret": ali_secret})
@@ -65,7 +65,7 @@ def renew_cert(ali_key="", ali_secret=""):
 
 
 if __name__ == "__main__":
-
+    acme_home = "/home/aaron/.acme.sh"
     yun_lang_cert_path = "/home/aaron/.acme.sh/yunlang.net.cn_ecc/yunlang.net.cn.cer"
     yun_lang_expiry_flag = check_cert_info(yun_lang_cert_path)
     print("云浪证书是否临期失效{}".format(yun_lang_expiry_flag))
