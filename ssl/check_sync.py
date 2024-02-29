@@ -82,5 +82,5 @@ if __name__ == "__main__":
     if cur_date == file_update_date:
         yun_lang_ali_key = "LTAI5tLoxwSyoM6P6fxfqynw"
         yun_lang_ali_secret = "spYzggqokuudoJX84NxZYqBnGN2i0z"
-        output = renew_cert(yun_lang_ali_key, yun_lang_ali_secret)
+        output = renew_cert(yun_lang_ali_key, yun_lang_ali_secret, acme_home)
         print(output)
