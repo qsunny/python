@@ -33,11 +33,12 @@ def get_file_time(filename):
     # create_time = os.path.getctime(filename)  # 创建时间
     # print('old create time:{}'.format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(create_time))))
     update_time = os.path.getmtime(filename)  # 修改时间
-    print('old update time:{}'.format(time.strftime("%Y-%m-%d", time.localtime(update_time))))
+    update_time_str = time.strftime("%Y-%m-%d", time.localtime(update_time));
+    print('old update time:{}'.format(update_time_str))
     # access_time = os.path.getatime(filename)  # 访问时间
     # print('old access time:{}'.format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(access_time))))
     # return create_time, update_time, access_time
-    return update_time
+    return update_time_str
 
 
 if __name__ == "__main__":
