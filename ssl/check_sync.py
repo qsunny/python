@@ -1,9 +1,11 @@
 # -*- encoding=utf-8 -*-
 import os
+import sys
 import time
 import subprocess
 import datetime
 import pprint
+from subprocess import CalledProcessError, STDOUT, check_output
 
 
 def check_cert_info(cert_path):
@@ -43,13 +45,22 @@ def get_file_time(filename):
 
 def renew_cert(ali_key="", ali_secret=""):
     env_dic = {"Ali_Key": ali_key, "Ali_Secret": ali_secret}
-    renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force",
-                                            "--log", "/home/aaron/.acme.sh/acme.sh.log", "--accountconf", "/home/aaron/.acme.sh/account.conf"],
-                                           env=env_dic, errors="ddd", cwd="/home/aaron/.acme.sh")
+    try:
+        renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force",
+                                                "--log", "/home/aaron/.acme.sh/acme.sh.log", "--accountconf", "/home/aaron/.acme.sh/account.conf"],
+                                               env=env_dic, stderr=STDOUT, cwd="/home/aaron/.acme.sh", universal_newlines=True)
 
-    # renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--version"],
-    #                                        env={"Ali_Key": ali_key, "Ali_Secret": ali_secret})
-    return renew_result;
+        # renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--version"],
+        #                                        env={"Ali_Key": ali_key, "Ali_Secret": ali_secret})
+
+        return renew_result
+    except CalledProcessError as e:
+        sys.stderr.write(e.output)
+        sys.stderr.flush()
+        return e.returncode
+    else:
+        return 0
+
 
 
 if __name__ == "__main__":
