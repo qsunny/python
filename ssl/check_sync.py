@@ -43,7 +43,7 @@ def get_file_time(filename):
 
 def renew_cert(ali_key="", ali_secret=""):
     env_dic = {"Ali_Key": ali_key, "Ali_Secret": ali_secret}
-    renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force", "--debug", "--accountconf", "/home/aaron/.acme.sh/account.conf"],
+    renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force", "--log", "--accountconf", "/home/aaron/.acme.sh/account.conf"],
                                            env=env_dic, errors="ddd")
 
     # renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--version"],
