@@ -41,6 +41,12 @@ def get_file_time(filename):
     return update_time_str
 
 
+def renew_cert(ali_key="", ali_secret=""):
+    renew_result = subprocess.check_output(["acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force"],
+                                           env={"Ali_Key": ali_key, "Ali_Secret": ali_secret})
+    return renew_result;
+
+
 if __name__ == "__main__":
 
     yun_lang_cert_path = "/home/aaron/.acme.sh/yunlang.net.cn_ecc/yunlang.net.cn.cer"
@@ -55,3 +61,8 @@ if __name__ == "__main__":
     cur_date = to_date.strftime("%Y-%m-%d")
 
     print(cur_date == file_update_date)
+
+    if cur_date == file_update_date:
+        yun_lang_ali_key = "LTAI5tLoxwSyoM6P6fxfqynw"
+        yun_lang_ali_secret = "spYzggqokuudoJX84NxZYqBnGN2i0z"
+        renew_cert(yun_lang_ali_key, yun_lang_ali_secret)
