@@ -47,8 +47,10 @@ if __name__ == "__main__":
     print("云浪证书是否临期失效{}".format(yun_lang_expiry_flag))
 
     file_update_date = get_file_time(yun_lang_cert_path)
+    print("file_update_date:{}".format(file_update_date))
 
     to_date = datetime.date.today()
+    print("to_date:{}".format(to_date))
     cur_date = to_date.strftime("%Y-%m-%d")
 
     print(cur_date == file_update_date)
