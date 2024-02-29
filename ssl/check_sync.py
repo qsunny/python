@@ -47,7 +47,7 @@ def renew_cert(ali_key="", ali_secret=""):
     env_dic = {"Ali_Key": ali_key, "Ali_Secret": ali_secret}
     try:
         renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--renew", "--dns", "dns_ali", "-d", "yunlang.net.cn", "-d", "*.yunlang.net.cn", "--force",
-                                                "--log", "/home/aaron/.acme.sh/acme.sh.log", "--accountconf", "/home/aaron/.acme.sh/account.conf"],
+                                                "--log", "/home/aaron/.acme.sh/acme.sh.log"],
                                                env=env_dic, stderr=STDOUT, cwd="/home/aaron/.acme.sh", universal_newlines=True)
 
         # renew_result = subprocess.check_output(["/home/aaron/.acme.sh/acme.sh", "--version"],
