@@ -2,12 +2,14 @@
 import os
 import sys
 import time
+import oss2
 import subprocess
 import datetime
 import pprint
 import paramiko
 from scp import SCPClient
 from subprocess import CalledProcessError, STDOUT, check_output
+from oss2.credentials import EnvironmentVariableCredentialsProvider
 
 "检查ssl证书是否过期，重新生成证书"
 '''
@@ -217,6 +219,66 @@ def copy_cert_restart_service(cert_key_path=None, cert_path=None, dest_file=None
         remote_exec_command("/usr/local/nginx/sbin/nginx -s reload", dest_host, account, passwd)
 
 
+def read_cert_as_string(cert_path=None):
+    """读取证书内容"""
+    try:
+        with open(cert_path, 'r') as cert_file:
+            cert_content = cert_file.read()
+            return cert_content
+    except FileNotFoundError:
+        print(f"Certificate file not found: {cert_path}")
+        return None
+    except Exception as e:
+        print(f"Error reading certificate: {e}")
+        return None
+
+
+def push_cert_oss_domain(cert_key_path=None, cert_path=None, ali_key=None, ali_secret=None):
+    """推送证书到oss绑定的域名:img.tulangkj.com"""
+    print("推送证书到oss绑定的域名:img.tulangkj.com")
+    os.environ = {"OSS_ACCESS_KEY_ID": ali_key,
+                  "OSS_ACCESS_KEY_SECRET": ali_secret}
+
+    # 验证环境变量是否设置成功
+    # print(os.getenv('OSS_ACCESS_KEY_ID'))
+    try:
+        # 使用环境变量中获取的RAM用户的访问密钥配置访问凭证。
+        envProvider = EnvironmentVariableCredentialsProvider()
+        # print(envProvider.access_key_id)
+        auth = oss2.ProviderAuth(envProvider)
+
+        # yourEndpoint填写Bucket所在地域对应的Endpoint。以华东1（杭州）为例，Endpoint填写为https://oss-cn-hangzhou.aliyuncs.com。
+        endpoint = 'https://oss-cn-shenzhen.aliyuncs.com'
+
+        # print_region(auth, endpoint)
+
+        # 填写Bucket名称，并设置连接超时时间为30秒。
+        bucket = oss2.Bucket(auth, endpoint, 'img-tulangkj', connect_timeout=30)
+
+        # 填写自定义域名。
+        test_domain = 'img.tulangkj.com'
+        # 填写旧版证书ID。
+        # previous_cert_id = '12294248-cn-hangzhou'
+        # 使用示例
+        certificate = read_cert_as_string(cert_path)
+        # 设置证书私钥。
+        private_key = read_cert_as_string(cert_key_path)
+        # if certificate:
+        #     print(certificate)
+        # if private_key:
+        #     print(private_key)
+
+        # cert = oss2.models.CertInfo(certificate=certificate, private_key=private_key)
+        # 通过force=True设置强制覆盖旧版证书。
+        # 通过delete_certificate选择是否删除证书。设置为delete_certificate=True表示删除证书，设置为delete_certificate=False表示不删除证书。
+        cert = oss2.models.CertInfo(certificate=certificate, private_key=private_key, force=True, delete_certificate=False)
+        input = oss2.models.PutBucketCnameRequest(test_domain, cert)
+        resp = bucket.put_bucket_cname(input)
+        print(resp)
+    except Exception as e:
+        print(f"Error push certificate oss domain: {e}")
+
+
 if __name__ == "__main__":
     domain = "yunlang.net.cn"
     # acme_home = "/home/aaron/.acme.sh"
@@ -232,10 +294,10 @@ if __name__ == "__main__":
     generate_result = generate_cert(domain, True, acme_home, yun_lang_cert_key_path, yun_lang_cert_path, yun_lang_ali_key, yun_lang_ali_secret)
     if generate_result == 0:
         restart_nginx_service()
-        copy_cert_restart_service(yun_lang_cert_key_path, yun_lang_cert_path, dest_file, "120", "root", "")
+        copy_cert_restart_service(yun_lang_cert_key_path, yun_lang_cert_path, dest_file, "", "root", "")
 
 
-    domain = "rongzhoufu.com"
+    domain = ""
     rongzhoufu_cert_key_path = "/data/ng-conf/cert/rongzhoufu/rongzhoufu_privkey.pem"
     rongzhoufu_cert_path = "/data/ng-conf/cert/rongzhoufu/rongzhoufu_fullchain.pem"
     dest_file = "/usr/local/nginx/conf/cert/rongzhoufu"
@@ -249,7 +311,7 @@ if __name__ == "__main__":
                               "/usr/local/nginx/conf/conf.d/cert/rongzhoufu", "", "root", "")
 
 
-    domain = "tulangkj.com"
+    domain = ""
     tulangkj_cert_key_path = "/data/ng-conf/cert/tulangkj/tulangkj_privkey.pem"
     tulangkj_cert_path = "/data/ng-conf/cert/tulangkj/tulangkj_fullchain.pem"
     dest_file = "/usr/local/nginx/conf/cert/tulangkj"
@@ -261,9 +323,10 @@ if __name__ == "__main__":
         restart_nginx_service()
         copy_cert_restart_service(tulangkj_cert_key_path, tulangkj_cert_path, dest_file, "", "root", "")
         copy_cert_restart_service(tulangkj_cert_key_path, tulangkj_cert_path, "/usr/local/nginx/conf/conf.d/cert/tulangkj", "", "root", "")
+        push_cert_oss_domain(tulangkj_cert_key_path, tulangkj_cert_path, "", "")
 
 
-    domain = "moyuinfo.com"
+    domain = ".com"
     moyuinfo_cert_key_path = "/data/ng-conf/cert/moyuinfo/moyuinfo_privkey.pem"
     moyuinfo_cert_path = "/data/ng-conf/cert/moyuinfo/moyuinfo_fullchain.pem"
     dest_file = "/usr/local/nginx/conf/cert/moyuinfo"
@@ -272,9 +335,9 @@ if __name__ == "__main__":
 
     generate_result = generate_cert(domain, True, acme_home, moyuinfo_cert_key_path, moyuinfo_cert_path, moyuinfo_ali_key, moyuinfo_ali_secret)
     if generate_result == 0:
-        copy_cert_restart_service(moyuinfo_cert_key_path, moyuinfo_cert_path, dest_file, "", "root", "")
+        copy_cert_restart_service(moyuinfo_cert_key_path, moyuinfo_cert_path, dest_file, "", "root", "T")
 
-    domain = "mingliuinfo.com"
+    domain = ""
     mingliuinfo_cert_key_path = "/data/ng-conf/cert/mingliuinfo/mingliuinfo_privkey.pem"
     mingliuinfo_cert_path = "/data/ng-conf/cert/mingliuinfo/mingliuinfo_fullchain.pem"
     dest_file = "/usr/local/nginx/conf/cert/mingliuinfo"
