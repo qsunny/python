@@ -12,6 +12,7 @@ import pandas as pd
 import pandas as pd
 import pdfkit
 from pdf2docx import parse
+import fitz
 
 """word、excel 转换 PDF"""
 __author__ = "aaron.qiu"
@@ -28,6 +29,8 @@ pip install pandas
 pip install pdfkit openpyxl
 
 pip install pdf2docx
+
+pip install PyMuPDF
 
 """
 
@@ -134,6 +137,41 @@ def ppt2pdf(ppt_path='ppt_path', ppt_pdf_path='ppt_to_pdf'):
     slides.Close()
 
 
+def pdf_to_images(pdf_file):
+    """pdf转图片"""
+    doc = fitz.open(pdf_file)
+    for p in doc:
+        pix = p.get_pixmap()
+        output = f"page{p.number}.png"
+        pix.writePNG(output)
+
+# def Downloader(url, output):
+#     """
+#     pip install internetdownloadmanager
+#     Downloader("Link url", "image.jpg")
+#     Downloader("Link url", "video.mp4")
+#     """
+#     pydownloader = idm.Downloader(worker=20,
+#                                 part_size=1024*1024*10,
+#                                 resumable=True,)
+#
+#     pydownloader .download(url, output)
+
+# pip install urllib3
+# import urllib3
+# # Fetch API data
+# url = "https://api.github.com/users/psf/repos"
+# http = urllib3.PoolManager()
+# response = http.request('GET', url)
+# print(response.status)
+# print(response.data)
+# # Post API data
+# url = "https://httpbin.org/post"
+# http = urllib3.PoolManager()
+# response = http.request('POST', url, fields={'hello': 'world'})
+# print(response.status)
+
+
 if __name__ == "__main__":
     # word_path = "D:\\temp\\word"
     # word_to_pdf = "D:\\temp\\pdf"
@@ -152,5 +190,7 @@ if __name__ == "__main__":
     # ppt_path = "D:\\temp\\ppt\\默予科技_20220702.pptx"
     # ppt_pdf_path = "D:\\temp\\pdf\\默予科技_20220702.pdf"
     # ppt2pdf(ppt_path, ppt_pdf_path)
+
+    # pdf_to_images("test.pdf")
 
 
