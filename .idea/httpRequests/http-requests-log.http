@@ -1,3 +1,35 @@
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "qwen:7b",
+  "prompt":"东莞有那些热门景点"
+}
+
+###
+
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "qwen",
+  "prompt":"东莞有那些热门景点"
+}
+
+<> 2024-04-04T092209.404.json
+
+###
+
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "mistral",
+  "prompt":"Here is a story about llamas eating grass"
+}
+
+###
+
 POST http://121.37.245.82:9308/json/search
 Content-Type: application/json
 Content-Length: 253
@@ -1951,134 +1983,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-12-29T155604.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 686
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "风华"
-          }
-        },
-        {
-          "equals": {
-            "brand": "@风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155545.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "index": "chips_all_product",
-  "query": {
-    "match":{"brand": "@风华"}
-  },
-  "highlight": {
-    "fields": ["name"]
-  }
-
-}
-
-<> 2023-12-29T155515.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 690
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "风华"
-          }
-        },
-        {
-          "equals": {
-            "any(brand)": "风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T154355.200.json
 
 ###
 

@@ -1,0 +1,7 @@
+POST http://{{base-url}}/api/generate
+Content-Type: application/json
+
+{
+  "model": "qwen:7b",
+  "prompt":"东莞有那些热门景点"
+}
