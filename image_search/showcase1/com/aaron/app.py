@@ -7,7 +7,9 @@ from transformers import AutoConfig
 from transformers import AutoModel
 from  pprint import pprint
 
-
+r"""
+pip install -U sentence-transformers
+"""
 
 # Now we load and encode the images
 def load_image(url_or_path):
@@ -19,9 +21,9 @@ def load_image(url_or_path):
 
 if __name__ == "__main__":
     # We use the original clip-ViT-B-32 for encoding images
-    # img_model = SentenceTransformer('clip-ViT-B-32')
+    img_model = SentenceTransformer('clip-ViT-B-32')
     # img_model = SentenceTransformer('C:/Users/Administrator/Downloads/clip-ViT-B-32')
-    img_model = AutoModel.from_pretrained("C:/Users/Administrator/Downloads/clip-ViT-B-32", trust_remote_code=True)
+    # img_model = AutoModel.from_pretrained("C:/Users/Administrator/Downloads/clip-ViT-B-32", trust_remote_code=True)
 
     # config = AutoConfig.from_pretrained('C:/Users/Administrator/Downloads/clip-ViT-B-32')
     # img_model = AutoModel.from_config(config)
