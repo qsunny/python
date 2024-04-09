@@ -21,7 +21,7 @@ def load_image(url_or_path):
 
 if __name__ == "__main__":
     # We use the original clip-ViT-B-32 for encoding images
-    img_model = SentenceTransformer('clip-ViT-B-32')
+    img_model = SentenceTransformer('sentence-transformers/clip-ViT-B-32')
     # img_model = SentenceTransformer('C:/Users/Administrator/Downloads/clip-ViT-B-32')
     # img_model = AutoModel.from_pretrained("C:/Users/Administrator/Downloads/clip-ViT-B-32", trust_remote_code=True)
 
