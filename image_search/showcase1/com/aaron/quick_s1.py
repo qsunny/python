@@ -1,8 +1,32 @@
-from transformers import pipeline
+from sentence_transformers import SentenceTransformer, util
+from PIL import Image
+import glob
+import torch
+import pickle
+import zipfile
+from IPython.display import display
+from IPython.display import Image as IPImage
+import os
+from tqdm.autonotebook import tqdm
 
-detector = pipeline(task="object-detection")
-preds = detector(
-    "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
-)
-preds = [{"score": round(pred["score"], 4), "label": pred["label"], "box": pred["box"]} for pred in preds]
-print(preds)
+"""
+https://github.com/UKPLab/sentence-transformers/blob/master/examples/applications/image-search/README.md
+https://unsplash.com/data
+
+"""
+
+if __name__ == "__main__":
+    # Load CLIP model
+    model = SentenceTransformer("clip-ViT-B-32")
+
+    # Encode an image:
+    img_emb = model.encode(Image.open("two_dogs_in_snow.jpg"))
+
+    # Encode text descriptions
+    text_emb = model.encode(
+        ["Two dogs in the snow", "A cat on a table", "A picture of London at night"]
+    )
+
+    # Compute cosine similarities
+    cos_scores = util.cos_sim(img_emb, text_emb)
+    print(cos_scores)
