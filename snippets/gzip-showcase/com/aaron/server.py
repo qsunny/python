@@ -1,3 +1,5 @@
+from typing import Union
+
 import uvicorn
 from fastapi import FastAPI, Response
 from fastapi.responses import FileResponse
@@ -43,6 +45,9 @@ async def hello():
     """
     return {"message": "Hello World"}
 
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {"item_id": item_id, "q": q}
 
 @app.get("/info")
 async def info():
