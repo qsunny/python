@@ -17,4 +17,5 @@ class ApiRouter(object):
         router = APIRouter()
         router.include_router(main.router, prefix="/api", tags=["测试"])
         router.include_router(logic.router, prefix="/logic", tags=["业务逻辑"])
+
         return router

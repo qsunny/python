@@ -1,3 +1,519 @@
+POST http://127.0.0.1:4396/api/items
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "kity",
+  "description": "hello kity",
+  "price": 3.526,
+  "tax": 0.13
+}
+
+<> 2024-07-25T174456.200.json
+
+###
+
+POST http://127.0.0.1:4396/api/items
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 38
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "kity",
+  "price": 3.526
+}
+
+<> 2024-07-25T174419.200.json
+
+###
+
+POST http://127.0.0.1:4396/api/items
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTkwMTE1Mn0.OuAnog15emz97NpumXftMvo5tZkwi8aQE05Uvn3vaKo
+Content-Type: application/json
+Content-Length: 38
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "kity",
+  "price": 3.526
+}
+
+<> 2024-07-25T174253.200.json
+
+###
+
+POST http://127.0.0.1:4396/api/items
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 38
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "kity",
+  "price": 3.526
+}
+
+<> 2024-07-25T174210.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171246.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171243.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171234.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171223.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171222.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171216.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5OTMwMH0.BuSF3LUSMPuqIwVhihyxlxsZH_DPrZuuSSrHC57QBwM
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T171212.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170929.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170910.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170907.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170905.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170903.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170901.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170857.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170856.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170854.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170844.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170820.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/health
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T170800.200.json
+
+###
+
+GET http://127.0.0.1:4396/logic/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T165744.200.json
+
+###
+
+GET http://127.0.0.1:4396/logic/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T165742.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T165502.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T165401.500.txt
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VybmFtZSI6ImFhcm9uLnFpdSIsImV4cCI6MTcyMTg5NzQwNH0.3Euf6z8Io1YrhGZCTQBfjZ4Q23l8rcDqulZYgM6_TH0
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T165009.500.txt
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VybmFtZSI6ImFhcm9uLnFpdSIsImV4cCI6MTcyMTg5NzQwNH0.3Euf6z8Io1YrhGZCTQBfjZ4Q23l8rcDqulZYgM6_TH0
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T164955.500.txt
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTg5NTA5Nn0.QdZgU4jh_DrSAMGpbsDkHpbrIWuxBC4LD52MtpGAFJc
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T164319.500.txt
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T164242.200.json
+
+###
+
+GET http://127.0.0.1:4396/api/ping
+Content-Type: application/json
+Content-Length: 4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-07-25T164238.200.json
+
+###
+
 POST http://localhost:11434/api/generate
 Content-Type: application/json
 
@@ -606,1383 +1122,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-12-29T170146.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T164238.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T164237.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T164235.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T164230.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T164210.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T164016.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "index": "chips_all_product",
-  "query": {
-    "match":{"brand": "@风华"}
-  },
-  "highlight": {
-    "fields": ["name"]
-  }
-
-}
-
-<> 2023-12-29T163956.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T163920.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 301
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{"index":"chips_all_product","limit":30,"offset":30,"sort":["stock"],"aggs":{},"expressions":{},"options":{},"query":{"match":{"intro,brand":{"query":"贴片电容","operator":"or"}},"bool":{"should":[{"equals":{"category_name":"贴片电容"}},{"equals":{"last_two_category_name":"贴片电容"}}]}}}
-
-<> 2023-12-29T163806.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 658
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电阻"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电阻"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电阻"
-                }
-              },
-              {
-                "match": {
-                  "brand": "11"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160449.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 656
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电阻"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电阻"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电阻"
-                }
-              },
-              {
-                "match": {
-                  "brand": ""
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160436.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 659
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电阻"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电阻"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电阻"
-                }
-              },
-              {
-                "match": {
-                  "brand": "til"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160405.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 662
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电阻"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电阻"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电阻"
-                }
-              },
-              {
-                "match": {
-                  "brand": "风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160341.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 662
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电容"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              },
-              {
-                "match": {
-                  "brand": "风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160255.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 661
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电容"
-          }
-        }
-      ],
-            "should": [
-              {
-                "match": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "match": {
-                  "last_two_category_name": "电容"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160223.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 663
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "电容"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160158.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 663
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "风华"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160151.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 663
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "风华"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160138.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 664
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "@风华"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160131.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 663
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "风华"
-          }
-        }
-      ],
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T160110.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 715
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155927.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 697
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": ""
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": ""
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": ""
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155910.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "index": "chips_all_product",
-  "query": {
-    "match":{"brand": "@风华"}
-  },
-  "highlight": {
-    "fields": ["name"]
-  }
-
-}
-
-<> 2023-12-29T155858.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 709
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": ""
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "@风华"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155852.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 708
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": ""
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "风华"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155840.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 715
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro": "@风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              },
-              {
-                "match": {
-                  "brand": "风华"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155833.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 600
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "brand": "风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "风华"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "风华"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155715.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 600
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "brand": "风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155656.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "index": "chips_all_product",
-  "query": {
-    "match":{"brand": "@风华"}
-  },
-  "highlight": {
-    "fields": ["name"]
-  }
-
-}
-
-<> 2023-12-29T155644.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "index": "chips_all_product",
-  "query": {
-    "match":{"brand|intro": "@风华"}
-  },
-  "highlight": {
-    "fields": ["name"]
-  }
-
-}
-
-<> 2023-12-29T155637.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 600
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "brand": "风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155617.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 606
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "profile": true,
-  "index": "chips_all_product",
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "intro|brand": "风华"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "equals": {
-                  "category_name": "电容"
-                }
-              },
-              {
-                "equals": {
-                  "last_two_category_name": "电容"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "highlight": {
-    "fields": [
-      "name"
-    ]
-  }
-}
-
-<> 2023-12-29T155604.200.json
 
 ###
 

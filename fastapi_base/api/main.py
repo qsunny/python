@@ -24,6 +24,29 @@ async def ping() -> Any:
     # return {"message": "Hello World"}
 
 
+@router.get("/health", name="health")
+async def health() -> Any:
+    resp = OkResp(data="health", message="跳过认证")
+    pprint(resp)
+
+    return resp
+
+
+# 定义Pydantic模型
+class Item(BaseModel):
+    name: str
+    description: str = None
+    price: float
+    tax: float = None
+
+
+# 路径操作函数，接收JSON数据
+@router.post("/items")
+async def create_item(item: Item):
+    # return item
+    return OkResp(data=item)
+
+
 @router.get("/auth", dependencies=[Security(check_permissions, scopes=["auto"])])
 async def auth() -> Any:
     return OkResp(data="pong")

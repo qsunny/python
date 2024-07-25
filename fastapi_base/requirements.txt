@@ -16,3 +16,4 @@ PyMySQL~=1.0.2
 DBUtils~=3.0.2
 redis~=2.10.6
 aioredis~=2.0.1
+pydantic-settings=~2.3.4

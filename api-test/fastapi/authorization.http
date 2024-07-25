@@ -1,0 +1,29 @@
+### 测试
+GET http://{{base-url}}/api/ping
+token: {{token}}
+Content-Type: application/json
+
+{
+
+}
+
+### 跳过认证
+GET http://{{base-url}}/api/health
+token: {{token}}
+Content-Type: application/json
+
+{
+
+}
+
+### 测试
+POST http://{{base-url}}/api/items
+token: {{token}}
+Content-Type: application/json
+
+{
+  "name": "kity",
+  "description": "hello kity",
+  "price": 3.526,
+  "tax": 0.13
+}

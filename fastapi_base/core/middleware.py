@@ -15,7 +15,7 @@ from fastapi.middleware import Middleware
 from starlette.responses import Response, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
-
+from fastapi_base.util.jwt_tool import *
 
 class LoggerMiddleware(BaseHTTPMiddleware):
 
@@ -45,7 +45,11 @@ class SimpleAuthorizationMiddleware(BaseHTTPMiddleware):
         return response
 
 
+
 class AuthorizationMiddleware(BaseHTTPMiddleware):
+
+    # 排除列表，包含不需要认证的 URL 路径
+    excluded_urls = {"/api/health", "/public"}
 
     def __init__(self, app):
         super().__init__(app)
@@ -53,11 +57,21 @@ class AuthorizationMiddleware(BaseHTTPMiddleware):
     async def dispatch(
             self, request: Request, call_next: RequestResponseEndpoint
     ) -> Response:
-        if not request.headers.get("authorization"):
+        token = request.headers.get("token")
+        if not token:
             return JSONResponse(status_code=200, content=ErrResp(message="未登录").to_dict)
-        await check_permissions(request=request)
-        if request.state.detail != "":
-            return JSONResponse(status_code=200, content=ErrResp(message=request.state.detail).to_dict)
+        # await check_permissions(request=request)
+        # if request.state.detail != "":
+        #     return JSONResponse(status_code=200, content=ErrResp(message=request.state.detail).to_dict)
+
+        if request.url.path in self.excluded_urls:
+            return await call_next(request)  # 直接继续处理请求
+
+        try:
+            varify_token = verify_access_token(token)
+        except BaseError as e:
+            return JSONResponse(status_code=200, content=ErrResp(message=str(e), err_no=e.code).to_dict)
+
         response = await call_next(request)
         return response
 
