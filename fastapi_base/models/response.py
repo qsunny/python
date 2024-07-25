@@ -14,13 +14,9 @@ from fastapi.encoders import jsonable_encoder
 
 class Response(BaseModel):
 
-    def __init__(
-            self,
-            data: Any = None,
-            message: str = ""
-    ):
-        self.data: str = data
-        self.message: str = message
+    data: Any
+    message: str
+    err_no: int
 
     @property
     def to_dict(self):
@@ -41,12 +37,13 @@ class OkResp(Response):
     def __init__(
             self,
             data: Any = None,
-            message: str = ""
+            message: str = "",
+            err_no: int = 0
     ):
-        super().__init__(data=data, message=message)
+        super().__init__(data=data, message=message, err_no=err_no)
         self.data = data
-        self.err_no = 0
-        self.message = message
+        self.err_no: int = 0
+        self.message: str = message
 
 
 class ErrResp(Response):
@@ -54,9 +51,10 @@ class ErrResp(Response):
     def __init__(
             self,
             data: Any = None,
-            message: str = ""
+            message: str = "",
+            err_no: int = 1
     ):
-        super().__init__(data=data, message=message)
+        super().__init__(data=data, message=message, err_no=err_no)
         self.data = data
         self.err_no = 1
         self.message = message

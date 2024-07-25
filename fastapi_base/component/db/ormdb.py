@@ -6,7 +6,8 @@ Created on 2023-09-22 18:14
 ---------
 @author: pepsi
 """
-from env import setting
+from fastapi_base.env import Setting
+setting = Setting()
 
 TORTOISE_ORM = {
     "connections": {"default": setting.MYSQL_DB_URL},

@@ -70,5 +70,5 @@ middleware = [
     Middleware(LoggerMiddleware),
 
     # 认证中间件
-    # Middleware(AuthorizationMiddleware)
+    Middleware(AuthorizationMiddleware)
 ]

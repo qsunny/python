@@ -8,9 +8,9 @@ Created on 2023-05-05 17:28
 """
 import httpx
 import random
-from env import setting
-from util import define
-
+from fastapi_base.env import Setting
+from fastapi_base.util import define
+setting = Setting()
 
 class Request:
     __REQUEST_ATTRS__ = {

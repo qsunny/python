@@ -6,7 +6,7 @@ Created on 2023-09-11 18:03
 ---------
 @author: pepsi
 """
-from models.base import Items
+from fastapi_base.models.base import Items
 from tortoise import fields
 
 
