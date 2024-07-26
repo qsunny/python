@@ -10,6 +10,7 @@ from pprint import pprint
 
 from fastapi import APIRouter, Security
 from fastapi_base.core.auth import check_permissions
+from fastapi_base.models.exception.base_error import BaseError
 from fastapi_base.models.response import *
 from fastapi_base.log.log import log
 
@@ -32,7 +33,10 @@ async def health() -> Any:
     log.info(resp)
     log.debug("debug========")
     log.error("error========")
+    # if True:
+    #     raise BaseError(message="模拟异常")
 
+    # a = 1/0
 
     return resp
 

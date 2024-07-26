@@ -8,9 +8,13 @@
 pip install tortoise-orm[asyncpg] fastapi
 """
 from tortoise.contrib.fastapi import register_tortoise
+
+from fastapi_base.core.exception_handler import sys_exception_handler
 from fastapi_base.core.middleware import middleware
 from fastapi_base.component.db.ormdb import TORTOISE_ORM
 from fastapi import FastAPI
+
+from fastapi_base.models.exception.base_error import BaseError
 from fastapi_base.timer import scheduler
 from fastapi_base.router import v1
 
@@ -21,7 +25,8 @@ class InitializeApp(object):
     """
 
     def __new__(cls, *args, **kwargs):
-        app = FastAPI(middleware=middleware)
+        app = FastAPI(middleware=middleware, exception_handlers={Exception:  sys_exception_handler})
+        # app.add_exception_handler(BaseError, sys_exception_handler)
         cls.event_init(app)
         cls.register_router(app)
         return app

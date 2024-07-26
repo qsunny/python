@@ -7,6 +7,10 @@ Created on 2023-07-03 16:06
 @author: pepsi
 """
 import time
+
+from starlette.middleware.gzip import GZipMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
+
 from fastapi_base.log.log import log as logger
 from fastapi import Request
 from fastapi_base.core.auth import check_permissions
@@ -76,11 +80,18 @@ class AuthorizationMiddleware(BaseHTTPMiddleware):
         response = await call_next(request)
         return response
 
-
+"""
+https://www.starlette.io/middleware/
+"""
 middleware = [
     # 跨域中间件
     Middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"],
                allow_headers=["*"]),
+
+    Middleware(TrustedHostMiddleware, allowed_hosts=['127.0.0.1', 'example.com', '*.example.com']),
+
+    Middleware(GZipMiddleware, minimum_size=1000, compresslevel=9),
+
     # 日志中间件
     Middleware(LoggerMiddleware),
 
