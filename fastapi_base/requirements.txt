@@ -17,3 +17,5 @@ DBUtils~=3.0.2
 redis~=2.10.6
 aioredis~=2.0.1
 pydantic-settings=~2.3.4
+prettytable=~3.10.2
+tqdm=~4.66.4
