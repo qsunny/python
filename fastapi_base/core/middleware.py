@@ -57,15 +57,16 @@ class AuthorizationMiddleware(BaseHTTPMiddleware):
     async def dispatch(
             self, request: Request, call_next: RequestResponseEndpoint
     ) -> Response:
+
+        if request.url.path in self.excluded_urls:
+            return await call_next(request)  # 直接继续处理请求
+
         token = request.headers.get("token")
         if not token:
             return JSONResponse(status_code=200, content=ErrResp(message="未登录").to_dict)
         # await check_permissions(request=request)
         # if request.state.detail != "":
         #     return JSONResponse(status_code=200, content=ErrResp(message=request.state.detail).to_dict)
-
-        if request.url.path in self.excluded_urls:
-            return await call_next(request)  # 直接继续处理请求
 
         try:
             varify_token = verify_access_token(token)
