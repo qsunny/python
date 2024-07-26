@@ -52,7 +52,7 @@ class InitializeApp(object):
             register_tortoise(
                 app,
                 config=TORTOISE_ORM,
-                generate_schemas=True,  # 重启服务时自动生成数据库表；关闭，改为使用aerich
+                generate_schemas=False,  # 重启服务时自动生成数据库表；关闭，改为使用aerich
                 add_exception_handlers=True,
             )
             scheduler.start()  # 定时任务

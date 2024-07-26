@@ -16,8 +16,9 @@ class Anchor(Items):
     follower = fields.IntField(description="粉丝数")
 
     class Meta:
-        table = "anchor"
-        ordering = ["-created_at"]
+        table = "t_anchor"
+        table_description = "This table contains a list of all the example events"
+        ordering = ["-id"]
 
 
 
