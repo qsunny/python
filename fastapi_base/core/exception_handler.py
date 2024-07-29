@@ -1,5 +1,8 @@
+from fastapi import HTTPException
+from starlette.exceptions import WebSocketException
 from starlette.requests import Request
 from starlette.responses import JSONResponse
+from starlette.websockets import WebSocket
 
 from fastapi_base.log.log import log
 from fastapi_base.models.exception.base_error import BaseError
@@ -24,3 +27,19 @@ async def sys_exception_handler(request: Request, e: Exception):
                 "traceback": None,         # 在这个简单示例中不包括traceback，但可以在更复杂的情况下添加
             }
         )
+
+async def http_exception(request: Request, exc: HTTPException):
+    return JSONResponse({"detail": exc.detail}, status_code=exc.status_code)
+
+async def websocket_exception(websocket: WebSocket, exc: WebSocketException):
+    await websocket.close(code=1008)
+
+exception_handlers = {
+    WebSocketException: websocket_exception
+}
+
+exception_handlers = {
+    HTTPException: http_exception,
+    WebSocketException: websocket_exception,
+    Exception: sys_exception_handler
+}

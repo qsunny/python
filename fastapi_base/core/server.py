@@ -14,7 +14,7 @@ from fastapi_base.core.middleware import middleware
 from fastapi_base.component.db.ormdb import TORTOISE_ORM
 from fastapi import FastAPI
 
-from fastapi_base.models.exception.base_error import BaseError
+from fastapi_base.core.exception_handler import exception_handlers
 from fastapi_base.timer import scheduler
 from fastapi_base.router import v1
 
@@ -25,7 +25,7 @@ class InitializeApp(object):
     """
 
     def __new__(cls, *args, **kwargs):
-        app = FastAPI(middleware=middleware, exception_handlers={Exception:  sys_exception_handler})
+        app = FastAPI(middleware=middleware, exception_handlers=exception_handlers)
         # app.add_exception_handler(BaseError, sys_exception_handler)
         cls.event_init(app)
         cls.register_router(app)
