@@ -22,27 +22,28 @@ service = Service(executable_path='D:\download\chromedriver-win64\chromedriver.e
 options = webdriver.ChromeOptions()
 browser = webdriver.Chrome(service=service, options=options)
 
-# def test():
-#     website_URL ="https://www.baidu.com"
-#     browser.get(website_URL)
-#
-#     refreshrate = int(3) #每3秒刷新一次Google主页。
-#    # 它会一直运行，直到你停掉编译器
-#     while True:
-#         time.sleep(refreshrate)
-#         browser.refresh()
+def open_baidu():
+    website_URL ="https://www.baidu.com"
+    browser.get(website_URL)
+
+    refreshrate = int(3) #每3秒刷新一次Google主页。
+   # 它会一直运行，直到你停掉编译器
+    while True:
+        time.sleep(refreshrate)
+        browser.refresh()
 
 
-def test2():
+def baidu_home():
     website_URL ="https://www.baidu.com"
     browser.get(website_URL)
 
     we = browser.find_element(By.ID, "kw")
     we.send_keys("python")
+    browser.find_element(By.ID, "su").click()
     time.sleep(5)
 
 
 
 if  __name__ == "__main__":
-    test2()
+    baidu_home()
     browser.quit()
