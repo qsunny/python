@@ -13,6 +13,7 @@ from oss2.credentials import EnvironmentVariableCredentialsProvider
 
 "检查ssl证书是否过期，重新生成证书"
 '''
+pip install oss2
 pip install paramiko
 pip install scp
 '''
