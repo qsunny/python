@@ -13,9 +13,9 @@ def get_html(url):
 
 
 # 构造获取大学排名信息列表 使用xpath解析网页
-def parse_html(ulist,html):
+def parse_html(ulist, html):
     html_doc = etree.HTML(html)
-    for box in  html_doc.xpath('//tbody/tr'):
+    for box in html_doc.xpath('//tbody/tr'):
         num = box.xpath('./td[1]/div/text()')[0]      # 添加[0]输出格式为{'num': '1', 'name': '清华大学（北京）', 'area': '大陆', 'score': '100'}
         name = box.xpath('./td[2]//span[@class="name-cn"]/text()')[0]  # 没有[0]输出格式为{'num': ['1'], 'name': ['清华大学（北京）'], 'area': ['大陆'], 'score': ['100']}
         en_name = box.xpath('./td[2]//span[@class="name-en"]/text()')[0]
