@@ -105,3 +105,4 @@ ENV/
 *.sqlite
 *.keras
 
+/snippets/excel2sql/*.sql
