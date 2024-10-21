@@ -44,6 +44,10 @@ def get_expire_time():
 
 
 def create_dir(dir_path):
+    # 确保备份目录存在
+    if not os.path.exists(backup_dir):
+        os.makedirs(backup_dir)
+
     # 如果目录存在则退出
     if os.path.exists(dir_path):
         return
