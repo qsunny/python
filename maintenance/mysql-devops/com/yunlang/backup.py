@@ -51,7 +51,7 @@ def create_dir(dir_path):
     os.mkdir(dir_path)
 
 
-cmd_template = "docker exec {container_name} mysqldump -u{db_user} -p{db_password} {database} > {file_path}"
+cmd_template = "mysqldump -u{db_user} -p{db_password} {database} > {file_path}"
 
 
 # 备份指定数据库
