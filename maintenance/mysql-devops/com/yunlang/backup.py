@@ -84,9 +84,6 @@ def zip_dir(dir_path):
 # 备份数据库
 def backup():
     backup_path = get_backup_path()
-    # 确保备份目录存在
-    if not os.path.exists(backup_path):
-        os.makedirs(backup_path)
 
     try:
         create_dir(backup_path)
