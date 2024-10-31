@@ -34,6 +34,7 @@ def send_feishu_msg(content=None):
 
 if __name__ == "__main__":
     """
+    https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN
     curl -X POST -H "Content-Type: application/json" -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"request example\"}}" https://open.feishu.cn/open-apis/bot/v2/hook/xxxx
     """
     send_feishu_msg("request example")
