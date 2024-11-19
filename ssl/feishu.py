@@ -2,11 +2,13 @@ import requests
 import json
 
 
-def send_feishu_msg(content=None):
+def send_feishu_msg(content=None, at_all=True):
     try:
         # 目标URL
-        url = 'https://open.feishu.cn/open-apis/bot/v2/hook/'
+        url = 'https://open.feishu.cn/open-apis/bot/v2/hook/35xxxx'
 
+        if at_all:
+            content = f'<at user_id="all">所有人</at>{content}'
         # 要发送的JSON数据
         json_data = {
             'msg_type': 'text',
@@ -35,6 +37,6 @@ def send_feishu_msg(content=None):
 if __name__ == "__main__":
     """
     https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN
-    curl -X POST -H "Content-Type: application/json" -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"request example\"}}" https://open.feishu.cn/open-apis/bot/v2/hook/xxxx
+    curl -X POST -H "Content-Type: application/json" -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"<at user_id=\"all\">所有人</at> request example\"}}" https://open.feishu.cn/open-apis/bot/v2/hook/35xxxxx
     """
     send_feishu_msg("request example")
