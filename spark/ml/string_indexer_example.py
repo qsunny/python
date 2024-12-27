@@ -15,30 +15,25 @@
 # limitations under the License.
 #
 
-from __future__ import print_function
-
-import sys
-from operator import add
-
+# $example on$
+from pyspark.ml.feature import StringIndexer
+# $example off$
 from pyspark.sql import SparkSession
 
-
 if __name__ == "__main__":
-    # if len(sys.argv) != 2:
-    #     print("Usage: wordcount <file>", file=sys.stderr)
-    #     sys.exit(-1)
-
     spark = SparkSession\
         .builder\
-        .appName("PythonWordCount") \
+        .appName("StringIndexerExample")\
         .getOrCreate()
 
-    lines = spark.read.text("hdfs://data-master:9000/spark-logs/application_1735133075191_0005").rdd.map(lambda r: r[0])
-    counts = lines.flatMap(lambda x: x.split(' ')) \
-                  .map(lambda x: (x, 1)) \
-                  .reduceByKey(add)
-    output = counts.collect()
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # $example on$
+    df = spark.createDataFrame(
+        [(0, "a"), (1, "b"), (2, "c"), (3, "a"), (4, "a"), (5, "c")],
+        ["id", "category"])
+
+    indexer = StringIndexer(inputCol="category", outputCol="categoryIndex")
+    indexed = indexer.fit(df).transform(df)
+    indexed.show()
+    # $example off$
 
     spark.stop()

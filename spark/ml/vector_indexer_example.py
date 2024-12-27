@@ -15,30 +15,30 @@
 # limitations under the License.
 #
 
-from __future__ import print_function
-
-import sys
-from operator import add
-
+# $example on$
+from pyspark.ml.feature import VectorIndexer
+# $example off$
 from pyspark.sql import SparkSession
 
-
 if __name__ == "__main__":
-    # if len(sys.argv) != 2:
-    #     print("Usage: wordcount <file>", file=sys.stderr)
-    #     sys.exit(-1)
-
     spark = SparkSession\
         .builder\
-        .appName("PythonWordCount") \
+        .appName("VectorIndexerExample")\
         .getOrCreate()
 
-    lines = spark.read.text("hdfs://data-master:9000/spark-logs/application_1735133075191_0005").rdd.map(lambda r: r[0])
-    counts = lines.flatMap(lambda x: x.split(' ')) \
-                  .map(lambda x: (x, 1)) \
-                  .reduceByKey(add)
-    output = counts.collect()
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # $example on$
+    data = spark.read.format("libsvm").load("data/mllib/sample_libsvm_data.txt")
+
+    indexer = VectorIndexer(inputCol="features", outputCol="indexed", maxCategories=10)
+    indexerModel = indexer.fit(data)
+
+    categoricalFeatures = indexerModel.categoryMaps
+    print("Chose %d categorical features: %s" %
+          (len(categoricalFeatures), ", ".join(str(k) for k in categoricalFeatures.keys())))
+
+    # Create new column "indexed" with categorical values transformed to indices
+    indexedData = indexerModel.transform(data)
+    indexedData.show()
+    # $example off$
 
     spark.stop()

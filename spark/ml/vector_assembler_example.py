@@ -15,30 +15,30 @@
 # limitations under the License.
 #
 
-from __future__ import print_function
-
-import sys
-from operator import add
-
+# $example on$
+from pyspark.ml.linalg import Vectors
+from pyspark.ml.feature import VectorAssembler
+# $example off$
 from pyspark.sql import SparkSession
 
-
 if __name__ == "__main__":
-    # if len(sys.argv) != 2:
-    #     print("Usage: wordcount <file>", file=sys.stderr)
-    #     sys.exit(-1)
-
     spark = SparkSession\
         .builder\
-        .appName("PythonWordCount") \
+        .appName("VectorAssemblerExample")\
         .getOrCreate()
 
-    lines = spark.read.text("hdfs://data-master:9000/spark-logs/application_1735133075191_0005").rdd.map(lambda r: r[0])
-    counts = lines.flatMap(lambda x: x.split(' ')) \
-                  .map(lambda x: (x, 1)) \
-                  .reduceByKey(add)
-    output = counts.collect()
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # $example on$
+    dataset = spark.createDataFrame(
+        [(0, 18, 1.0, Vectors.dense([0.0, 10.0, 0.5]), 1.0)],
+        ["id", "hour", "mobile", "userFeatures", "clicked"])
+
+    assembler = VectorAssembler(
+        inputCols=["hour", "mobile", "userFeatures"],
+        outputCol="features")
+
+    output = assembler.transform(dataset)
+    print("Assembled columns 'hour', 'mobile', 'userFeatures' to vector column 'features'")
+    output.select("features", "clicked").show(truncate=False)
+    # $example off$
 
     spark.stop()

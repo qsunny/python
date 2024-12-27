@@ -15,30 +15,26 @@
 # limitations under the License.
 #
 
-from __future__ import print_function
+from pyspark import SparkContext
+# $example on$
+import numpy as np
 
-import sys
-from operator import add
-
-from pyspark.sql import SparkSession
-
+from pyspark.mllib.stat import Statistics
+# $example off$
 
 if __name__ == "__main__":
-    # if len(sys.argv) != 2:
-    #     print("Usage: wordcount <file>", file=sys.stderr)
-    #     sys.exit(-1)
+    sc = SparkContext(appName="SummaryStatisticsExample")  # SparkContext
 
-    spark = SparkSession\
-        .builder\
-        .appName("PythonWordCount") \
-        .getOrCreate()
+    # $example on$
+    mat = sc.parallelize(
+        [np.array([1.0, 10.0, 100.0]), np.array([2.0, 20.0, 200.0]), np.array([3.0, 30.0, 300.0])]
+    )  # an RDD of Vectors
 
-    lines = spark.read.text("hdfs://data-master:9000/spark-logs/application_1735133075191_0005").rdd.map(lambda r: r[0])
-    counts = lines.flatMap(lambda x: x.split(' ')) \
-                  .map(lambda x: (x, 1)) \
-                  .reduceByKey(add)
-    output = counts.collect()
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # Compute column summary statistics.
+    summary = Statistics.colStats(mat)
+    print(summary.mean())  # a dense vector containing the mean value for each column
+    print(summary.variance())  # column-wise variance
+    print(summary.numNonzeros())  # number of nonzeros in each column
+    # $example off$
 
-    spark.stop()
+    sc.stop()

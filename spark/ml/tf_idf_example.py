@@ -15,30 +15,36 @@
 # limitations under the License.
 #
 
-from __future__ import print_function
-
-import sys
-from operator import add
-
+# $example on$
+from pyspark.ml.feature import HashingTF, IDF, Tokenizer
+# $example off$
 from pyspark.sql import SparkSession
 
-
 if __name__ == "__main__":
-    # if len(sys.argv) != 2:
-    #     print("Usage: wordcount <file>", file=sys.stderr)
-    #     sys.exit(-1)
-
     spark = SparkSession\
         .builder\
-        .appName("PythonWordCount") \
+        .appName("TfIdfExample")\
         .getOrCreate()
 
-    lines = spark.read.text("hdfs://data-master:9000/spark-logs/application_1735133075191_0005").rdd.map(lambda r: r[0])
-    counts = lines.flatMap(lambda x: x.split(' ')) \
-                  .map(lambda x: (x, 1)) \
-                  .reduceByKey(add)
-    output = counts.collect()
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # $example on$
+    sentenceData = spark.createDataFrame([
+        (0.0, "Hi I heard about Spark"),
+        (0.0, "I wish Java could use case classes"),
+        (1.0, "Logistic regression models are neat")
+    ], ["label", "sentence"])
+
+    tokenizer = Tokenizer(inputCol="sentence", outputCol="words")
+    wordsData = tokenizer.transform(sentenceData)
+
+    hashingTF = HashingTF(inputCol="words", outputCol="rawFeatures", numFeatures=20)
+    featurizedData = hashingTF.transform(wordsData)
+    # alternatively, CountVectorizer can also be used to get term frequency vectors
+
+    idf = IDF(inputCol="rawFeatures", outputCol="features")
+    idfModel = idf.fit(featurizedData)
+    rescaledData = idfModel.transform(featurizedData)
+
+    rescaledData.select("label", "features").show()
+    # $example off$
 
     spark.stop()

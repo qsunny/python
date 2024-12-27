@@ -15,30 +15,22 @@
 # limitations under the License.
 #
 
-from __future__ import print_function
-
-import sys
-from operator import add
-
-from pyspark.sql import SparkSession
-
+from pyspark import SparkContext
 
 if __name__ == "__main__":
-    # if len(sys.argv) != 2:
-    #     print("Usage: wordcount <file>", file=sys.stderr)
-    #     sys.exit(-1)
+    sc = SparkContext(appName="StratifiedSamplingExample")  # SparkContext
 
-    spark = SparkSession\
-        .builder\
-        .appName("PythonWordCount") \
-        .getOrCreate()
+    # $example on$
+    # an RDD of any key value pairs
+    data = sc.parallelize([(1, 'a'), (1, 'b'), (2, 'c'), (2, 'd'), (2, 'e'), (3, 'f')])
 
-    lines = spark.read.text("hdfs://data-master:9000/spark-logs/application_1735133075191_0005").rdd.map(lambda r: r[0])
-    counts = lines.flatMap(lambda x: x.split(' ')) \
-                  .map(lambda x: (x, 1)) \
-                  .reduceByKey(add)
-    output = counts.collect()
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # specify the exact fraction desired from each key as a dictionary
+    fractions = {1: 0.1, 2: 0.6, 3: 0.3}
 
-    spark.stop()
+    approxSample = data.sampleByKey(False, fractions)
+    # $example off$
+
+    for each in approxSample.collect():
+        print(each)
+
+    sc.stop()
