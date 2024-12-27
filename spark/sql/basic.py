@@ -39,7 +39,7 @@ from pyspark.sql.types import *
 def basic_df_example(spark):
     # $example on:create_df$
     # spark is an existing SparkSession
-    df = spark.read.json("file:///D:/workspacepython/python/spark/resources/people.json")
+    df = spark.read.json("file:///D:/workspace-py/python/spark/resources/people.json")
     # Displays the content of the DataFrame to stdout
     df.show()
     # +----+-------+
@@ -144,7 +144,7 @@ def schema_inference_example(spark):
     sc = spark.sparkContext
 
     # Load a text file and convert each line to a Row.
-    lines = sc.textFile("file:///D:/workspacepython/python/spark/resources/people.txt")
+    lines = sc.textFile("file:///D:/workspace-py/python/spark/resources/people.txt")
     parts = lines.map(lambda l: l.split(","))
     people = parts.map(lambda p: Row(name=p[0], age=int(p[1])))
 
@@ -169,7 +169,7 @@ def programmatic_schema_example(spark):
     sc = spark.sparkContext
 
     # Load a text file and convert each line to a Row.
-    lines = sc.textFile("file:///D:/workspacepython/python/spark/resources/people.txt")
+    lines = sc.textFile("file:///D:/workspace-py/python/spark/resources/people.txt")
     parts = lines.map(lambda l: l.split(","))
     # Each line is converted to a tuple.
     people = parts.map(lambda p: (p[0], p[1].strip()))
@@ -199,6 +199,7 @@ def programmatic_schema_example(spark):
     # +-------+
     # $example off:programmatic_schema$
 
+
 if __name__ == "__main__":
     # $example on:init_session$
     spark = SparkSession \
@@ -209,8 +210,8 @@ if __name__ == "__main__":
         .getOrCreate()
     # $example off:init_session$
 
-    # basic_df_example(spark)
+    basic_df_example(spark)
     # schema_inference_example(spark)
-    programmatic_schema_example(spark)
+    # programmatic_schema_example(spark)
 
     spark.stop()
