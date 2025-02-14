@@ -32,7 +32,7 @@ if __name__ == "__main__":
         .getOrCreate()
 
     # Load training data
-    training = spark.read.format("libsvm").load("data/mllib/sample_libsvm_data.txt")
+    training = spark.read.format("libsvm").load("hdfs://data-master:9000/data/mllib/sample_libsvm_data.txt")
 
     lr = LogisticRegression(maxIter=10, regParam=0.3, elasticNetParam=0.8)
 

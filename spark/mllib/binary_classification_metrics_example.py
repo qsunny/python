@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # $example on$
     # Several of the methods available in scala are currently missing from pyspark
     # Load training data in LIBSVM format
-    data = MLUtils.loadLibSVMFile(sc, "data/mllib/sample_binary_classification_data.txt")
+    data = MLUtils.loadLibSVMFile(sc, "hdfs://data-master:9000/data/mllib/sample_binary_classification_data.txt")
 
     # Split data into training (60%) and test (40%)
     training, test = data.randomSplit([0.6, 0.4], seed=11)

@@ -38,7 +38,7 @@ if __name__ == "__main__":
     # $example on$
     # Prepare training and test data.
     data = spark.read.format("libsvm")\
-        .load("data/mllib/sample_linear_regression_data.txt")
+        .load("hdfs://data-master:9000/data/mllib/sample_linear_regression_data.txt")
     train, test = data.randomSplit([0.9, 0.1], seed=12345)
 
     lr = LinearRegression(maxIter=10)

@@ -20,7 +20,8 @@ options = webdriver.ChromeOptions()
 # 设置一些选项（如果需要的话）
 # options.add_argument(...)
 # browser = webdriver.Chrome(executable_path ="D:\download\chromedriver-win64\chromedriver.exe", options=options)
-service = Service(executable_path='D:\download\chromedriver-win64\chromedriver.exe')
+# service = Service(executable_path='D:\download\chromedriver-win64\chromedriver.exe')
+service = Service(executable_path='C:\Users\Administrator\Downloads\chrome-win64\chromedriver.exe')
 options = webdriver.ChromeOptions()
 browser = webdriver.Chrome(service=service, options=options)
 # 等待页面加载完成（如果需要）

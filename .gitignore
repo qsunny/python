@@ -106,3 +106,6 @@ ENV/
 *.keras
 
 /snippets/excel2sql/*.sql
+/yolo/predict/runs/
+/yolo/quickstart/runs/
+/yolo/quickstart/datasets/
