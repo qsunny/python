@@ -13,6 +13,17 @@ pip install dlib
 
 视频、图片视觉分割
 https://github.com/facebookresearch/segment-anything/tree/main
+
+标注工具
+https://github.com/HumanSignal/labelImg
+https://github.com/wkentaro/labelme
+
+训练自己的yolo-v11数据集
+https://blog.csdn.net/A1983Z/article/details/142656210
+https://www.cnblogs.com/huanghongbo/p/18668497
+
+资源 数据集 模型
+https://universe.roboflow.com/
 """
 
 if __name__ == "__main__":
