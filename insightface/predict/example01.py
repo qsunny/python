@@ -27,7 +27,7 @@ if __name__ == "__main__":
     detection.prepare(ctx_id=-1, det_size=(640, 480))
 
     cap = cv2.VideoCapture('C:/Users/Administrator/Videos/dance.mp4')
-    while True:
+    while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
