@@ -1,0 +1,13 @@
+GET http://{{base-url}}/api/v1/auth
+Authorization: {{Authorization}}
+Content-Type: application/json
+
+{
+  "model": "qwen:7b",
+  "prompt":"东莞有那些热门景点"
+}
+
+### 文档
+GET http://localhost:3001/api/v1/documents
+Authorization: Authorization: Bearer THZR0SE-XHD40G7-P1Q9EN9-JZ6QS74
+Content-Type: application/json
