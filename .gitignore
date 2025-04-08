@@ -109,3 +109,16 @@ ENV/
 /yolo/predict/runs/
 /yolo/quickstart/runs/
 /yolo/quickstart/datasets/
+/insightface/predict/img/aaron2.jpg
+/insightface/predict/img/aaron3.jpg
+/insightface/predict/img/aaron4.jpg
+/insightface/predict/img/aaron5.jpg
+/insightface/predict/img/aaron6.jpg
+/insightface/predict/img/aaron.jpg
+/yolo/quickstart/bus.jpg
+/snippets/watermark/mark.pdf
+/yolo/predict/result.jpg
+/yolo/predict/yolo11n.pt
+/yolo/quickstart/yolo11n.pt
+/yolo/predict/yolo11n-cls.pt
+/yolo/predict/yolo11n-seg.pt
