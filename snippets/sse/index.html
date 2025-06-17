@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户端完整示例</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #4361ee;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        /* SSE数据展示区 */
+        #sse-data {
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>实时数据监控面板</h2>
+            <button id="loadBtn">启动数据流</button>
+            <div id="sse-data"></div>
+        </div>
+        
+        <div class="card">
+            <h2>交互演示</h2>
+            <button id="actionBtn">点击测试事件</button>
+            <p id="dynamicText">初始状态文本</p>
+        </div>
+    </div>
+
+    <!-- 脚本加载 -->
+    <script>
+        // 使用DOMContentLoaded确保DOM就绪[1,4](@ref)
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. 按钮事件绑定
+            const actionBtn = document.getElementById('actionBtn');
+            actionBtn.addEventListener('click', function() {
+                document.getElementById('dynamicText').textContent = "状态更新于: " + new Date().toLocaleTimeString();
+            });
+
+            // 2. SSE客户端实现[9,10](@ref)
+            const sseContainer = document.getElementById('sse-data');
+            document.getElementById('loadBtn').addEventListener('click', initSSE);
+
+            function initSSE() {
+                const eventSource = new EventSource('http://127.0.0.1:5000/stream');
+                
+                eventSource.onmessage = (event) => {
+                    const dataLine = document.createElement('div');
+                    dataLine.textContent = `[${new Date().toLocaleTimeString()}] ${event.data}`;
+                    sseContainer.appendChild(dataLine);
+                };
+
+                eventSource.onerror = (err) => {
+                    console.error("SSE连接异常:", err);
+                    eventSource.close();
+                };
+            }
+        });
+
+        // 3. 资源加载完成事件[1](@ref)
+        window.onload = function() {
+            console.log("所有资源(图片/字体等)加载完毕");
+        };
+    </script>
+    
+    <!-- 外部库示例 -->
+    <!--  
+<script src="https://unpkg.com/json5@2.0.0/dist/index.min.js"></script>
+    -->
+</body>
+</html>
