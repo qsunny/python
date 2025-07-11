@@ -1,3 +1,174 @@
+POST http://127.0.0.1:8000/chain/invoke
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 92
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "Korean",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T111006.200.json
+
+###
+
+POST http://127.0.0.1:8000/chain/invoke
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 96
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "Vietnamese",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110924.200.json
+
+###
+
+POST http://127.0.0.1:8000/chain/invoke
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "Russian",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110823.200.json
+
+###
+
+POST http://127.0.0.1:8000/chain/invoke
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 94
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "Japanese",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110733.200.json
+
+###
+
+POST http://127.0.0.1:8000/chain/invoke
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "english",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110646.200.json
+
+###
+
+POST http://127.0.0.1:8000/chain/invoke
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "english",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110527.200.json
+
+###
+
+POST http://127.0.0.1:8000/chain/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "english",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110428.404.json
+
+###
+
+POST http://127.0.0.1:8000/chain
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "english",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110405.404.json
+
+###
+
+POST http://127.0.0.1:8000/chain
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "input": {
+      "language": "english",
+      "text": "我的英文成绩很糟糕"
+  }
+}
+
+<> 2025-07-11T110245.404.json
+
+###
+
 GET http://127.0.0.1:4396/api/health
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
 Content-Type: application/json
@@ -737,367 +908,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-12-29T174040.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 417
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 0,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand,name": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T174009.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 412
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 0,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T172313.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 412
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 0,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T171743.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 407
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 0,
-	"sort": [""],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T171736.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 406
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": [],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T171726.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 434
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-    "profile": true,
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T171710.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T171651.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T170427.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 413
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 30,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand": {
-				"query": "贴片电阻",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "贴片电阻"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "贴片电阻"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T170413.200.json
 
 ###
 

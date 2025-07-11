@@ -1,0 +1,11 @@
+### 测试
+POST http://{{base-url}}/chain/invoke
+token: {{token}}
+Content-Type: application/json
+
+{
+  "input": {
+      "language": "Korean",
+      "text": "我的英文成绩很糟糕"
+  }
+}
