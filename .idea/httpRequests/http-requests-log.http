@@ -1,3 +1,28 @@
+POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+X-goog-api-key: AIzaSyAr-umcpUPFa1PROADVqtt5rR-_3DaMdik
+Content-Type: application/json
+Content-Length: 156
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }
+
+<> 2025-07-11T165336.200.json
+
+###
+
 POST http://127.0.0.1:8000/chain/invoke
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwLCJ1c2VyX25hbWUiOiJhYXJvbiIsImV4cCI6MTcyMTk2MDYzM30.uDVNoMAAotGlvri4KgepZW2ctAqAiEgzWdFhnOeLb40
 Content-Type: application/json
@@ -868,46 +893,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-12-29T174136.200.json
-
-###
-
-POST http://121.37.245.82:9308/json/search
-Content-Type: application/json
-Content-Length: 486
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-	"index": "chips_all_product",
-	"limit": 30,
-	"offset": 0,
-	"sort": ["stock"],
-	"aggs": {},
-	"expressions": {},
-	"options": {},
-	"query": {
-		"match": {
-			"intro,brand,name": {
-				"query": "0603 X5R 1uf ±10% 50V 贴片电容",
-				"operator": "or"
-			}
-		},
-		"bool": {
-			"should": [{
-				"equals": {
-					"category_name": "0603 X5R 1uf ±10% 50V 贴片电容"
-				}
-			}, {
-				"equals": {
-					"last_two_category_name": "0603 X5R 1uf ±10% 50V 贴片电容"
-				}
-			}]
-		}
-	}
-}
-
-<> 2023-12-29T174040.200.json
 
 ###
 

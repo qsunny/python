@@ -9,3 +9,20 @@ Content-Type: application/json
       "text": "我的英文成绩很糟糕"
   }
 }
+
+### gemini测试
+POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+X-goog-api-key: AIzaSyAr-umcpUPFa1PROADVqtt5rR-_3DaMdik
+Content-Type: application/json
+
+{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }
