@@ -122,3 +122,5 @@ ENV/
 /yolo/quickstart/yolo11n.pt
 /yolo/predict/yolo11n-cls.pt
 /yolo/predict/yolo11n-seg.pt
+/langchain/translation_deepseek/chroma_db2/**
+/langchain/translation_deepseek/chroma_db/**
