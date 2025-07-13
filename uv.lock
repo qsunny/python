@@ -603,6 +603,15 @@ wheels = [
 ]
 
 [[package]]
+name = "defusedxml"
+version = "0.7.1"
+source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
+sdist = { url = "https://mirrors.aliyun.com/pypi/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69" }
+wheels = [
+    { url = "https://mirrors.aliyun.com/pypi/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61" },
+]
+
+[[package]]
 name = "distro"
 version = "1.9.0"
 source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
@@ -3047,6 +3056,7 @@ dependencies = [
     { name = "pypdf2" },
     { name = "pyspeedtest" },
     { name = "python-magic" },
+    { name = "pytube" },
     { name = "pywin32" },
     { name = "reportlab" },
     { name = "requires" },
@@ -3063,6 +3073,7 @@ dependencies = [
     { name = "ultralytics" },
     { name = "uvicorn", extra = ["standard"] },
     { name = "you-get" },
+    { name = "youtube-transcript-api" },
 ]
 
 [package.metadata]
@@ -3100,6 +3111,7 @@ requires-dist = [
     { name = "pypdf2", specifier = ">=3.0.1" },
     { name = "pyspeedtest", specifier = ">=1.2.7" },
     { name = "python-magic", specifier = ">=0.4.27" },
+    { name = "pytube", specifier = ">=15.0.0" },
     { name = "pywin32", specifier = ">=310" },
     { name = "reportlab", specifier = ">=4.4.2" },
     { name = "requires", specifier = ">=0.11.0" },
@@ -3116,6 +3128,7 @@ requires-dist = [
     { name = "ultralytics", specifier = ">=8.3.161" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.35.0" },
     { name = "you-get", specifier = ">=0.4.1743" },
+    { name = "youtube-transcript-api", specifier = ">=1.1.1" },
 ]
 
 [[package]]
@@ -3159,6 +3172,15 @@ source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
 sdist = { url = "https://mirrors.aliyun.com/pypi/packages/da/db/0b3e28ac047452d079d375ec6798bf76a036a08182dbb39ed38116a49130/python-magic-0.4.27.tar.gz", hash = "sha256:c1ba14b08e4a5f5c31a302b7721239695b2f0f058d125bd5ce1ee36b9d9d3c3b" }
 wheels = [
     { url = "https://mirrors.aliyun.com/pypi/packages/6c/73/9f872cb81fc5c3bb48f7227872c28975f998f3e7c2b1c16e95e6432bbb90/python_magic-0.4.27-py2.py3-none-any.whl", hash = "sha256:c212960ad306f700aa0d01e5d7a325d20548ff97eb9920dcd29513174f0294d3" },
+]
+
+[[package]]
+name = "pytube"
+version = "15.0.0"
+source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
+sdist = { url = "https://mirrors.aliyun.com/pypi/packages/d8/e7/16fec46c8d255c4bbc4b185d89c91dc92cdb802836570d8004d0db169c91/pytube-15.0.0.tar.gz", hash = "sha256:076052efe76f390dfa24b1194ff821d4e86c17d41cb5562f3a276a8bcbfc9d1d" }
+wheels = [
+    { url = "https://mirrors.aliyun.com/pypi/packages/51/64/bcf8632ed2b7a36bbf84a0544885ffa1d0b4bcf25cc0903dba66ec5fdad9/pytube-15.0.0-py3-none-any.whl", hash = "sha256:07b9904749e213485780d7eb606e5e5b8e4341aa4dccf699160876da00e12d78" },
 ]
 
 [[package]]
@@ -4504,6 +4526,19 @@ dependencies = [
 sdist = { url = "https://mirrors.aliyun.com/pypi/packages/2d/85/f4a22b842bc0e0f57dc56ae54266dbc451547cee90bae9480131100ad92a/you_get-0.4.1743.tar.gz", hash = "sha256:cbc1250d577246ec9d422cef113882844c80d8729f32d3183a5fa76648a20741" }
 wheels = [
     { url = "https://mirrors.aliyun.com/pypi/packages/a0/21/cdb541f0c6b9ab827f553c95c4539f2e58c6f9b6508aede0c8488e3ed026/you_get-0.4.1743-py3-none-any.whl", hash = "sha256:9f8968769772d3b50e0b38f33f119a4c0d5708ecfe0eeacee950661523b2ccf7" },
+]
+
+[[package]]
+name = "youtube-transcript-api"
+version = "1.1.1"
+source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
+dependencies = [
+    { name = "defusedxml" },
+    { name = "requests" },
+]
+sdist = { url = "https://mirrors.aliyun.com/pypi/packages/eb/e5/226a09b9ca49136f901a969fd65bcd055eaa980fd04ac065dac4741e6b00/youtube_transcript_api-1.1.1.tar.gz", hash = "sha256:2e1162d45ece14223a58a4a39176c464fdd33d5ebdd6def18ebb038dea62f667" }
+wheels = [
+    { url = "https://mirrors.aliyun.com/pypi/packages/a7/8a/b942a230084045da4a255bbebca97693569535670c0a23c09096881b2846/youtube_transcript_api-1.1.1-py3-none-any.whl", hash = "sha256:a438a824d67c0885855047e2b38993abdd4f59b69a983cf27b50a06c9d564064" },
 ]
 
 [[package]]

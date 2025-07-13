@@ -38,6 +38,7 @@ dependencies = [
     "pypdf2>=3.0.1",
     "pyspeedtest>=1.2.7",
     "python-magic>=0.4.27",
+    "pytube>=15.0.0",
     "pywin32>=310",
     "reportlab>=4.4.2",
     "requires>=0.11.0",
@@ -54,4 +55,5 @@ dependencies = [
     "ultralytics>=8.3.161",
     "uvicorn[standard]>=0.35.0",
     "you-get>=0.4.1743",
+    "youtube-transcript-api>=1.1.1",
 ]
