@@ -23,13 +23,21 @@ https://api-docs.deepseek.com/zh-cn/quick_start/parameter_settings
 翻译	1.3
 创意类写作/诗歌创作	1.5
 """
-deepseek = ChatOpenAI(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com/v1",  # DeepSeek API 入口
-    model="deepseek-chat",                   # 使用 DeepSeek 官方模型
-    temperature=1.3,                         # 控制创意度 (0-1)
-)
+# deepseek = ChatOpenAI(
+#     api_key=os.getenv("DEEPSEEK_API_KEY"),
+#     base_url="https://api.deepseek.com/v1",  # DeepSeek API 入口
+#     model="deepseek-chat",                   # 使用 DeepSeek 官方模型
+#     temperature=1.3,                         # 控制创意度 (0-1)
+# )
 
+# 初始化ChatOpenAI模型
+deepseek = ChatOpenAI(
+    model="anthropic/claude-3.7-sonnet",  # 可以在OpenRouter模型列表中选择
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url="https://openrouter.ai/api/v1",
+    temperature=0.5,
+    max_tokens=1024
+)
 
 prompt_template = ChatPromptTemplate.from_messages(
     [
@@ -83,8 +91,8 @@ resp2 = do_message.invoke(
 print(resp2.content)
 
 # 第三轮 返回流式数据
-for resp in do_message.stream({"my_message": [HumanMessage(content='请问我的名字叫什么?')], "language": "中文"}, config = config):
-    print(resp.content, end='--')
+for resp in do_message.stream({"my_message": [HumanMessage(content='我想让你给我讲个关于唐代诗人李白成长的故事?')], "language": "中文"}, config = config):
+    print(resp.content, end='')
 
 
 

@@ -25,6 +25,7 @@ dependencies = [
     "matplotlib>=3.10.3",
     "nltk>=3.9.1",
     "onnx==1.16.1",
+    "openai>=1.95.0",
     "openpyxl>=3.1.5",
     "pandas-stubs==2.3.0.250703",
     "paramiko>=3.5.1",

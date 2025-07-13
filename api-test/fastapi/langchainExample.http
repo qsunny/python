@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ### gemini测试
 POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
-X-goog-api-key: AIzaSyAr-umcpUPFa1PROADVqtt5rR-_3DaMdik
+X-goog-api-key:
 Content-Type: application/json
 
 {
