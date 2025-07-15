@@ -101,6 +101,7 @@ prompt = ChatPromptTemplate.from_messages(
 # with_structured_output 模型的输出是一个结构化的数据
 chain ={'text':RunnablePassthrough()}|prompt | deepseek.with_structured_output(schema=ManyPerson, method="function_calling")
 # text = '马路上走来一个女生，长长的黑头发披在肩上，大概1米7左右'
-text = '马路上走来一个女生，长长的黑头发披在肩上，大概1米7左右。走在她旁边的是她的男朋友,叫刘海; 一头白银发,比她高10厘米'
+# text = '马路上走来一个女生，长长的黑头发披在肩上，大概1米7左右。走在她旁边的是她的男朋友,叫刘海; 一头白银发,比她高10厘米'
+text = "My name is jeff, my hair is black and i ay 6 feet tall, Anna has the same color hair as me."
 resp = chain.invoke(text)
 print(resp)
