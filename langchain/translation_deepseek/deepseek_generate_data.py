@@ -71,7 +71,7 @@ chain = create_data_generation_chain(llm=deepseek)
 
 result = chain.invoke(
     {
-        "fields":['蓝色', '黄色'],
+        "fields": {"颜色": ['蓝色', '黄色']},
         "preferences":{"style": "七言律诗"}
     }
 )
