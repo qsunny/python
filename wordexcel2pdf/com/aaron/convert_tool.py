@@ -42,6 +42,10 @@ def word2pdf(word_path='word_path', word_to_pdf='word_to_pdf'):
             convert(word_path + "/" + word_name, word_to_pdf + "/" + word_name.replace("docx", "pdf"))
 
 
+def word2pdfv2(word_path='word_path', word_to_pdf='word_to_pdf'):
+    """word 转 pdf"""
+    convert(word_path , word_to_pdf)
+
 def excel2pdf(excel_path='excel_path', execl_pdf_path='excel_to_pdf'):
     """ excel 转 pdf
     excel_path = "D:/公众号/0626/Python研究者.xls"
@@ -173,13 +177,17 @@ def pdf_to_images(pdf_file):
 
 
 if __name__ == "__main__":
-    # word_path = "D:\\temp\\word"
-    # word_to_pdf = "D:\\temp\\pdf"
+    # word_path = "E:\\temp\\word"
+    # word_to_pdf = "E:\\temp\\pdf"
     # word2pdf(word_path, word_to_pdf)
 
-    pdf_path = "D:\\temp\\pdf\\特威森-香薰精油 MSDS-2023.pdf"
-    docx_path = "D:\\temp\\word\\特威森-香薰精油 MSDS-2023.docx"
-    pdf2docx(pdf_path, docx_path)
+    word_path = "E:\\temp\\word\\罗江卫生院四诊仪采购合同.docx"
+    word_to_pdf = "E:\\temp\\pdf\\罗江卫生院四诊仪采购合同.pdf"
+    word2pdfv2(word_path, word_to_pdf)
+
+    # pdf_path = "E:\\temp\\pdf\\1206\\IFRASY042807香水白茶.pdf"
+    # docx_path = "E:\\temp\\word\\IFRASY042807香水白茶.docx"
+    # pdf2docx(pdf_path, docx_path)
 
     # excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
     # execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
