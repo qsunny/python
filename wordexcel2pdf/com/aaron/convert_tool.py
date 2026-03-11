@@ -181,13 +181,13 @@ if __name__ == "__main__":
     # word_to_pdf = "E:\\temp\\pdf"
     # word2pdf(word_path, word_to_pdf)
 
-    word_path = "E:\\temp\\word\\罗江卫生院四诊仪采购合同.docx"
-    word_to_pdf = "E:\\temp\\pdf\\罗江卫生院四诊仪采购合同.pdf"
-    word2pdfv2(word_path, word_to_pdf)
+    # word_path = "E:\\temp\\word\\罗江卫生院四诊仪采购合同.docx"
+    # word_to_pdf = "E:\\temp\\pdf\\罗江卫生院四诊仪采购合同.pdf"
+    # word2pdfv2(word_path, word_to_pdf)
 
-    # pdf_path = "E:\\temp\\pdf\\1206\\IFRASY042807香水白茶.pdf"
-    # docx_path = "E:\\temp\\word\\IFRASY042807香水白茶.docx"
-    # pdf2docx(pdf_path, docx_path)
+    pdf_path = "E:\\temp\\pdf\\0306\\TWSMSDS硅藻土202635.pdf"
+    docx_path = "E:\\temp\\word\\TWSMSDS硅藻土202635.docx"
+    pdf2docx(pdf_path, docx_path)
 
     # excel_path = "D:\\temp\\excel\\南港新需求V2_1010.xlsx"
     # execl_pdf_path = "D:\\temp\\pdf\\南港新需求V2_1010.pdf"
